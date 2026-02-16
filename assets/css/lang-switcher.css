@@ -1,0 +1,81 @@
+/* ==========================================================================
+   Language Switcher - Floating UI
+   ========================================================================== */
+
+.bl_langSwitcher {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 1000;
+    font-family: "Arapey", serif;
+}
+
+.bl_langSwitcherToggle {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: none;
+    background: var(--color-accent, #72a03b);
+    color: #fff;
+    font-family: "Arapey", serif;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18), 0 1px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bl_langSwitcherToggle:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.22), 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+.bl_langSwitcherToggle:active {
+    transform: scale(0.96);
+}
+
+.bl_langSwitcherDropdown {
+    position: absolute;
+    bottom: calc(100% + 10px);
+    right: 0;
+    min-width: 140px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.15), 0 2px 8px rgba(0, 0, 0, 0.08);
+    padding: 6px 0;
+    opacity: 0;
+    transform: translateY(8px);
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.bl_langSwitcherDropdown.is_open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.bl_langSwitcherItem {
+    display: block;
+    padding: 10px 18px;
+    font-family: "Arapey", serif;
+    font-size: 15px;
+    color: var(--color-text, #1c1c1c);
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    transition: background 0.15s ease;
+}
+
+.bl_langSwitcherItem:hover {
+    background: rgba(114, 160, 59, 0.08);
+}
+
+.bl_langSwitcherItem.is_active {
+    color: var(--color-accent, #72a03b);
+    font-weight: 700;
+    pointer-events: none;
+}

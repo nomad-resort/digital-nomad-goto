@@ -1,0 +1,584 @@
+<!doctype html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>数字游牧五岛列岛</title>
+    <link rel="icon" type="image/x-icon" href="../assets/image/favi_okinawa.ico">
+    <link rel="apple-touch-icon" href="../assets/image/favi_okinawa.ico">
+
+    <!-- Canonical & Hreflang -->
+    <link rel="canonical" href="https://goto-islands.nomadresort.jp/zh/" />
+    <link rel="alternate" hreflang="en" href="https://goto-islands.nomadresort.jp/" />
+    <link rel="alternate" hreflang="ja" href="https://goto-islands.nomadresort.jp/ja/" />
+    <link rel="alternate" hreflang="zh" href="https://goto-islands.nomadresort.jp/zh/" />
+    <link rel="alternate" hreflang="x-default" href="https://goto-islands.nomadresort.jp/" />
+
+    <!-- Browser Language Auto-Redirect -->
+    <script>
+        (function () {
+            if (localStorage.getItem('lang')) return;
+            var lang = navigator.language.slice(0, 2);
+            if (lang === 'ja' && !window.location.pathname.includes('/ja/')) window.location.replace('/ja/');
+            if (lang === 'zh' && !window.location.pathname.includes('/zh/')) window.location.replace('/zh/');
+        })();
+    </script>
+
+    <!-- OGP Settings -->
+    <meta property="og:title" content="Digital Nomad Goto" />
+    <meta property="og:description" content="逃离喧嚣，前往宫崎骏般的宁静岛屿。清澈的海、全景的天空、温暖的人心。五岛列岛 — 数字游民的隐秘圣地。" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://goto-islands.nomadresort.jp/zh/" />
+    <meta property="og:image" content="https://goto-islands.nomadresort.jp/assets/image/ogp.png" />
+    <meta property="og:site_name" content="数字游牧五岛列岛" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Digital Nomad Goto" />
+    <meta name="twitter:description" content="逃离喧嚣，前往宫崎骏般的宁静岛屿。清澈的海、全景的天空、温暖的人心。五岛列岛 — 数字游民的隐秘圣地。" />
+    <meta name="twitter:image" content="https://goto-islands.nomadresort.jp/assets/image/ogp.png" />
+
+    <!-- Preconnect to external resources for better performance -->
+    <link rel="preconnect" href="https://www.youtube.com" crossorigin />
+    <link rel="preconnect" href="https://www.google.com" crossorigin />
+    <link rel="preconnect" href="https://www.instagram.com" crossorigin />
+    <link rel="preconnect" href="https://elfsightcdn.com" crossorigin />
+    <link rel="dns-prefetch" href="https://www.youtube.com" />
+    <link rel="dns-prefetch" href="https://www.google.com" />
+    <link rel="dns-prefetch" href="https://www.instagram.com" />
+    <link rel="dns-prefetch" href="https://elfsightcdn.com" />
+
+    <link rel="stylesheet" href="../assets/css/reset.css" />
+    <link rel="stylesheet" href="../assets/css/loading.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../assets/css/event-popup.css" />
+    <link rel="stylesheet" href="../assets/css/lang-switcher.css" />
+</head>
+
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <img src="../assets/image/hero-okinawa.svg" alt="GOTO" class="loading-logo" />
+            <p class="loading-text">Now Loading...</p>
+        </div>
+        <div class="loading-map">
+            <img src="../assets/image/hero-map.webp" alt="五岛列岛地图" />
+        </div>
+    </div>
+
+    <header></header>
+    <main>
+        <section class="ly_hero">
+            <div class="ly_heroBg">
+                <img src="../assets/image/hero-bg.webp" loading="eager" fetchpriority="high" alt="五岛列岛风景" />
+            </div>
+
+            <!-- Event announcement popup -->
+            <div class="event-popup">
+                <div class="event-popup-content">
+                    <button class="event-popup-close" aria-label="关闭活动通知">×</button>
+                    <div class="event-popup-header">
+                        <span class="event-popup-badge">🎉 新活动</span>
+                    </div>
+                    <h3 class="event-popup-title">Nomad Resort 五岛列岛 2025</h3>
+                    <p class="event-popup-description">
+                        2025年10月15日至20日
+                    </p>
+                    <a href="https://vast-soul-1ed.notion.site/Escape-to-Goto-Islands-2025-26e1f96a364380f3a431e5e77d32307c?pvs=74"
+                        target="_blank" rel="noopener noreferrer" class="event-popup-link">了解更多 →</a>
+                </div>
+            </div>
+            <div class="ly_heroMap">
+                <img src="../assets/image/hero-map.webp" fetchpriority="high" loading="eager" alt="五岛列岛地图" />
+            </div>
+            <div class="ly_hero__inner">
+                <div class="ly_hero__title">
+                    <img src="../assets/image/hero-okinawa.svg" loading="eager" fetchpriority="high"
+                        alt="GOTO ISLANDS" />
+                </div>
+                <p class="ly_hero__subtitle">数字游民的静谧避世之所</p>
+            </div>
+        </section>
+
+        <section class="ly_feature">
+            <div class="bl_feature">
+                <div class="bl_featureHeader">
+                    <h2>为什么选择五岛列岛？</h2>
+                    <iframe width="1840" height="1035" src="https://www.youtube.com/embed/DZojBc_q_5A" title="五岛列岛"
+                        loading="lazy" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="bl_featureContent">
+                    <div class="bl_featureImg">
+                        <div class="feature_img1">
+                            <img loading="lazy" src="../assets/image/hero-img1.webp" alt="" />
+                        </div>
+                        <div class="feature_img2">
+                            <img loading="lazy" src="../assets/image/hero-img2.webp" alt="" />
+                        </div>
+                        <div class="feature_img3">
+                            <img loading="lazy" src="../assets/image/hero-img3.webp" alt="" />
+                        </div>
+                    </div>
+
+                    <div class="bl_featureTxt">
+                        <h3>数字游民的<br />宁静圣地</h3>
+                        <p>
+                            漂浮在东海之上的五岛列岛，不仅是避难者的庇护所，更是寻求心灵空间的圣地。<br />
+                            在这里，时间随着波浪的节奏、渔船低沉的引擎声、以及隐没在雾中山丘上教堂的钟声而缓缓流淌。
+                        </p>
+                    </div>
+
+                    <div class="bl_featureImg bl_featureImgBottom">
+                        <div class="feature_img4">
+                            <img loading="lazy" src="../assets/image/hero-img4.webp" alt="" />
+                        </div>
+                        <div class="feature_img5">
+                            <img loading="lazy" src="../assets/image/hero-img5.webp" alt="" />
+                        </div>
+                        <div class="feature_img6">
+                            <img loading="lazy" src="../assets/image/hero-img6.webp" alt="" />
+                        </div>
+                    </div>
+
+                    <div class="bl_featureFooter">
+                        <p>Escape to</p>
+                        <p>Quiet, Ghibli Islands.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="ly_culture">
+            <div class="bl_culture">
+                <div class="bl_cultureTop">
+                    <div class="bl_cultureTopText">
+                        <h2>
+                            潜伏基督徒遗产与原始自然
+                        </h2>
+                        <p>
+                            体验五岛列岛的独特文化，拥有联合国教科文组织世界遗产——潜伏基督徒相关遗迹和令人叹为观止的海岸线景观。<br />
+                            古老的历史、原始的自然和温暖的岛屿待客之道，营造出日本其他任何地方都无法比拟的氛围。
+                        </p>
+                    </div>
+                    <div class="bl_cultureTopImg">
+                        <img loading="lazy" src="../assets/image/culture-img1.webp" alt="" />
+                    </div>
+                </div>
+
+                <div class="bl_cultureImages">
+                    <div class="culture_img1">
+                        <img loading="lazy" src="../assets/image/culture-img2.webp" alt="" />
+                    </div>
+                    <div class="culture_img2">
+                        <img loading="lazy" src="../assets/image/culture-img3.webp" alt="" />
+                    </div>
+                    <div class="culture_img3">
+                        <img loading="lazy" src="../assets/image/culture-img4.webp" alt="" />
+                    </div>
+                </div>
+
+                <div class="bl_cultureImgBig">
+                    <img loading="lazy" src="../assets/image/culture-img5.webp" alt="" />
+                </div>
+
+                <div class="bl_cultureBottom">
+                    <h2>
+                        清澈的海、全景的天空与温暖的人心<br />
+                        — 在岛屿的宁静中，找到真正的自我。
+                    </h2>
+
+                    <div class="bl_cultureBottomCta">
+                        <img loading="lazy" src="../assets/image/culture-img6.webp" alt="加入Discord" />
+                        <div class="bl_cultureBottomCtaText">
+                            <h3>加入五岛列岛数字游牧社区</h3>
+                            <p>
+                                日程、地图、生活智慧——<br />
+                                你需要的一切都在这里。
+                            </p>
+                        </div>
+                    </div>
+                    <a class="link_btn" href="https://discord.gg/ECq2s35ASW">
+                        <p>
+                            <b>Discord社区</b>
+                        </p>
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#link_arr)">
+                                <path
+                                    d="M8 2.5c0 .371.367.925.738 1.39a6.6 6.6 0 0 0 1.7 1.523c.49.3 1.084.587 1.562.587m0 0c-.478 0-1.072.287-1.562.587-.654.4-1.224.924-1.7 1.523C8.367 8.575 8 9.13 8 9.5M12 6H0"
+                                    stroke="#fff" />
+                            </g>
+                            <defs>
+                                <clipPath id="link_arr">
+                                    <path fill="#fff" d="M12 0H0v12h12z" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="ly_access">
+            <div class="bl_access">
+                <div class="bl_accessTop">
+                    <h2 class="hp_title">交通</h2>
+                    <p>可从日本各大城市前往。从长崎和福冈有飞机和渡轮可达。</p>
+                </div>
+                <div class="bl_accessMap">
+                    <picture>
+                        <source media="(min-width: 768px)" srcset="../assets/image/access-map-pc.png" />
+                        <img loading="lazy" src="../assets/image/access-map-sp.png" alt="" />
+                    </picture>
+                </div>
+                <div class="bl_accessList">
+                    <div class="bl_accessListItem">
+                        <div class="bl_accessListIcon">
+                            <img loading="lazy" src="../assets/image/access-plane.svg" alt="" />
+                        </div>
+                        <div class="bl_accessListContent">
+                            <h3>从东京出发</h3>
+                            <ol>
+                                <li>
+                                    羽田 → 福冈机场：约2小时（飞机），福冈 → 五岛：约30分钟（飞机）
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="bl_accessListItem">
+                        <div class="bl_accessListIcon">
+                            <img loading="lazy" src="../assets/image/access-plane.svg" alt="" />
+                        </div>
+                        <div class="bl_accessListContent">
+                            <h3>从长崎出发</h3>
+                            <ol>
+                                <li>
+                                    长崎机场 → 五岛福江机场：约30分钟（飞机）
+                                </li>
+                                <li>
+                                    长崎港 → 福江港：约1.5小时（水翼船）
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="bl_accessListItem">
+                        <div class="bl_accessListIcon">
+                            <img loading="lazy" src="../assets/image/access-plane.svg" alt="" />
+                        </div>
+                        <div class="bl_accessListContent">
+                            <h3>从福冈出发</h3>
+                            <ol>
+                                <li>
+                                    福冈机场 → 五岛福江机场：约40分钟（飞机）
+                                </li>
+                                <li>
+                                    博多港 → 福江港：约8.5小时（夜间渡轮）
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="bl_accessListItem">
+                        <div class="bl_accessListIcon">
+                            <img loading="lazy" src="../assets/image/access-car.svg" alt="" />
+                        </div>
+                        <div class="bl_accessListContent">
+                            <h3>岛内交通</h3>
+                            <ol>
+                                <li>
+                                    租车、巴士或自行车是在岛上出行的主要方式。
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="bl_accessFrame">
+                    <iframe title="五岛列岛地图"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d424930.0!2d128.7!3d32.7!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3515e5c1c5f5e5f1%3A0x5f5e5e5e5e5e5e5e!2sGoto%2C%20Nagasaki!5e0!3m2!1szh-CN!2sjp!4v1700000000000!5m2!1szh-CN!2sjp"
+                        width="330" height="160" style="border: 0" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section class="ly_accommodation">
+            <div class="bl_accommodation">
+                <h2 class="hp_title">住宿</h2>
+                <div class="bl_gallerySwiper">
+                    <div class="swiper gallerySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="../assets/image/accommodation-img1.webp" alt="住宿 1" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../assets/image/accommodation-img2.webp" alt="住宿 2" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../assets/image/accommodation-img3.webp" alt="住宿 3" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../assets/image/accommodation-img4.webp" alt="住宿 4" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../assets/image/accommodation-img5.webp" alt="住宿 5" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../assets/image/accommodation-img6.webp" alt="住宿 6" />
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-buttons">
+                            <div class="swiper-button-prev">
+                                <img loading="lazy" src="../assets/image/swiper-arrow.svg" alt="" />
+                            </div>
+                            <div class="swiper-button-next">
+                                <img loading="lazy" src="../assets/image/swiper-arrow.svg" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="link_btn"
+                    href="https://vast-soul-1ed.notion.site/Escape-to-Goto-Islands-2025-26e1f96a364380f3a431e5e77d32307c?pvs=74">
+                    <p>
+                        <b>推荐住宿<br>（Notion）</b>
+                    </p>
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#link_arr)">
+                            <path
+                                d="M8 2.5c0 .371.367.925.738 1.39a6.6 6.6 0 0 0 1.7 1.523c.49.3 1.084.587 1.562.587m0 0c-.478 0-1.072.287-1.562.587-.654.4-1.224.924-1.7 1.523C8.367 8.575 8 9.13 8 9.5M12 6H0"
+                                stroke="#fff" />
+                        </g>
+                        <defs>
+                            <clipPath id="link_arr">
+                                <path fill="#fff" d="M12 0H0v12h12z" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </a>
+            </div>
+        </section>
+
+        <section class="ly_coworking">
+            <div class="bl_accommodation">
+                <h2 class="hp_title">共享办公空间</h2>
+                <div class="bl_gallerySwiper">
+                    <div class="swiper gallerySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="../assets/image/coworking-img1.webp" alt="共享办公空间 1" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../assets/image/coworking-img2.webp" alt="共享办公空间 2" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../assets/image/coworking-img3.webp" alt="共享办公空间 3" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../assets/image/coworking-img4.webp" alt="共享办公空间 4" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../assets/image/coworking-img5.webp" alt="共享办公空间 5" />
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-buttons">
+                            <div class="swiper-button-prev">
+                                <img loading="lazy" src="../assets/image/swiper-arrow.svg" alt="" />
+                            </div>
+                            <div class="swiper-button-next">
+                                <img loading="lazy" src="../assets/image/swiper-arrow.svg" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="link_btn"
+                    href="https://vast-soul-1ed.notion.site/Escape-to-Goto-Islands-2025-26e1f96a364380f3a431e5e77d32307c?pvs=74">
+                    <b>推荐共享办公空间<br>（Notion）</b>
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#link_arr)">
+                            <path
+                                d="M8 2.5c0 .371.367.925.738 1.39a6.6 6.6 0 0 0 1.7 1.523c.49.3 1.084.587 1.562.587m0 0c-.478 0-1.072.287-1.562.587-.654.4-1.224.924-1.7 1.523C8.367 8.575 8 9.13 8 9.5M12 6H0"
+                                stroke="#fff" />
+                        </g>
+                        <defs>
+                            <clipPath id="link_arr">
+                                <path fill="#fff" d="M12 0H0v12h12z" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </a>
+            </div>
+        </section>
+
+        <section class="ly_voices">
+            <div class="bl_voices">
+                <h2 class="hp_title">真实游民的心声</h2>
+                <div class="bl_voicesSwiper">
+                    <div class="swiper voicesSwiper">
+                        <div class="swiper-wrapper">
+                            <!-- No.1 on SP ver -->
+                            <div class="swiper-slide">
+                                <blockquote class="instagram-media"
+                                    data-instgrm-permalink="https://www.instagram.com/reel/DSPFJBxkifv/?utm_source=ig_embed&amp;utm_campaign=loading"
+                                    data-instgrm-version="14"></blockquote>
+                            </div>
+                            <!-- No.2 on SP ver -->
+                            <div class="swiper-slide">
+                                <blockquote class="instagram-media"
+                                    data-instgrm-permalink="https://www.instagram.com/reel/DSuscQTk88K/?utm_source=ig_embed&amp;utm_campaign=loading"
+                                    data-instgrm-version="14"></blockquote>
+                            </div>
+                            <!-- No.3 on SP ver -->
+                            <div class="swiper-slide">
+                                <blockquote class="instagram-media"
+                                    data-instgrm-permalink="https://www.instagram.com/reel/DSKx0u2Eg3f/?utm_source=ig_embed&amp;utm_campaign=loading"
+                                    data-instgrm-version="14"></blockquote>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-buttons">
+                            <div class="swiper-button-prev">
+                                <img loading="lazy" src="../assets/image/swiper-arrow.svg" alt="" />
+                            </div>
+                            <div class="swiper-button-next">
+                                <img loading="lazy" src="../assets/image/swiper-arrow.svg" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bl_voicesList">
+                    <!-- No.1 on PC ver -->
+                    <div>
+                        <blockquote class="instagram-media"
+                            data-instgrm-permalink="https://www.instagram.com/reel/DSPFJBxkifv/?utm_source=ig_embed&amp;utm_campaign=loading"
+                            data-instgrm-version="14">
+                        </blockquote>
+                    </div>
+                    <!-- No.2 on PC ver -->
+                    <div>
+                        <blockquote class="instagram-media"
+                            data-instgrm-permalink="https://www.instagram.com/reel/DSuscQTk88K/?utm_source=ig_embed&amp;utm_campaign=loading"
+                            data-instgrm-version="14">
+                        </blockquote>
+                    </div>
+                    <!-- No.3 on PC ver -->
+                    <div>
+                        <blockquote class="instagram-media"
+                            data-instgrm-permalink="https://www.instagram.com/reel/DSKx0u2Eg3f/?utm_source=ig_embed&amp;utm_campaign=loading"
+                            data-instgrm-version="14">
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="ly_instagram">
+            <div class="bl_instagram">
+                <h2 class="hp_title">关注我们的Instagram</h2>
+                <div class="bl_instagramFeed">
+                    <!-- Elfsight Instagram Feed | Untitled Instagram Feed -->
+                    <div class="elfsight-app-cb890781-93d5-4ec8-b348-92df8348bc4a" data-elfsight-app-lazy></div>
+                </div>
+                <div class="bl_localSupport">
+                    <h3>当地志愿者协助<br />您的旅居生活</h3>
+                    <img loading="lazy" src="../assets/image/support.webp" alt="" />
+                    <p>
+                        居住在五岛列岛的社区经理将为您的住宿提供支持。<br />他们会说英语，随时为您提供帮助——无论是问题、建议还是友好的聊天。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="ly_join">
+            <img class="bl_joinBg" src="../assets/image/join-team.webp" alt="" />
+            <h2>加入我们的团队</h2>
+            <div class="bl_join">
+                <div>
+                    <h3>Instagram</h3>
+                    <a class="bl_joinProfile" href="https://www.instagram.com/nomadresort_goto/"><img
+                            src="../assets/image/icon-instagram.svg" alt="Instagram" />@nomadresort_goto</a>
+                    <a class="el_joinLink" href="https://www.instagram.com/nomadresort_goto/">Instagram</a>
+                </div>
+                <div>
+                    <h3>Discord</h3>
+                    <a class="bl_joinProfile" href="https://discord.gg/ECq2s35ASW"><img
+                            src="../assets/image/icon-discord.svg" alt="Discord" />五岛列岛数字
+                        游牧社区</a>
+                    <a class="el_joinLink" href="https://discord.gg/ECq2s35ASW">Discord</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="ly_footer">
+        <div class="ly_heroBg">
+            <img src="../assets/image/hero-bg.webp" loading="eager" alt="五岛列岛风景" />
+        </div>
+        <div class="ly_hero__inner">
+            <div class="ly_hero__title">
+                <img src="../assets/image/hero-okinawa.svg" loading="eager" alt="GOTO ISLANDS" />
+            </div>
+            <p class="ly_hero__subtitle">Escape to quiet, Ghibli islands</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../assets/js/loading.js"></script>
+    <script src="../assets/js/swiper-bundle.min.js" defer></script>
+    <script src="../assets/js/swiper.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Instagram embed script
+            const script1 = document.createElement('script');
+            script1.src = 'https://www.instagram.com/embed.js';
+            script1.async = true;
+            document.body.appendChild(script1);
+
+            // Elfsight platform script
+            const script2 = document.createElement('script');
+            script2.src = 'https://elfsightcdn.com/platform.js';
+            script2.async = true;
+            document.body.appendChild(script2);
+        });
+    </script>
+    <script src="../assets/js/event-popup.js" defer></script>
+
+    <!-- Language Switcher -->
+    <div class="bl_langSwitcher">
+        <button class="bl_langSwitcherToggle" aria-label="切换语言">ZH</button>
+        <div class="bl_langSwitcherDropdown">
+            <a class="bl_langSwitcherItem" href="../" onclick="localStorage.setItem('lang','en')">English</a>
+            <a class="bl_langSwitcherItem" href="../ja/" onclick="localStorage.setItem('lang','ja')">日本語</a>
+            <a class="bl_langSwitcherItem is_active" href="./" onclick="localStorage.setItem('lang','zh')">中文</a>
+        </div>
+    </div>
+    <script>
+        (function () {
+            var toggle = document.querySelector('.bl_langSwitcherToggle');
+            var dropdown = document.querySelector('.bl_langSwitcherDropdown');
+
+            // 初始状态打开菜单
+            dropdown.classList.add('is_open');
+
+            toggle.addEventListener('click', function (e) {
+                e.stopPropagation();
+                dropdown.classList.toggle('is_open');
+            });
+            document.addEventListener('click', function () {
+                dropdown.classList.remove('is_open');
+            });
+
+            // 滚动时关闭菜单
+            window.addEventListener('scroll', function () {
+                if (dropdown.classList.contains('is_open')) {
+                    dropdown.classList.remove('is_open');
+                }
+            }, { passive: true });
+        })();
+    </script>
+</body>
+
+</html>
