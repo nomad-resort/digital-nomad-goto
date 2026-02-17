@@ -343,8 +343,8 @@ body {
 }
 
 .bl_featureImgBottom {
-  margin-block: 0 -30px;
-  aspect-ratio: 340 / 142;
+  margin-block: 0 16px;
+  aspect-ratio: 340 / 200;
 }
 
 .bl_featureImg>div {
@@ -1346,7 +1346,7 @@ body {
   .bl_cultureImages {
     max-width: 1000px;
     aspect-ratio: 1040 / 370;
-    margin-block: -120px 68px;
+    margin-block: 36px 68px;
     margin-inline: min(105px, 5.2vw) auto;
   }
 
