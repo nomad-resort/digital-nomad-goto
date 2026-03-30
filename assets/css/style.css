@@ -60,10 +60,23 @@ body {
   z-index: -10;
 }
 
+.ly_heroBg::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); /* 30% overlay opacity */
+  z-index: 1;
+}
+
 .ly_heroBg img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  position: relative;
+  z-index: 0;
 }
 
 .ly_heroFv {
@@ -1395,5 +1408,107 @@ body {
 
   .feature_img6 {
     right: 13.6vw;
+  }
+}
+
+/*==========================================================
+# Organizer & Partners
+==========================================================*/
+.ly_partners {
+  padding: 80px 20px;
+  background-color: #fff;
+}
+
+.hp_title--partners {
+  margin-bottom: 60px;
+}
+
+.bl_partners {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.bl_partners__tier {
+  margin-bottom: 60px;
+}
+
+.bl_partners__tier:last-child {
+  margin-bottom: 0;
+}
+
+.bl_partners__subTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 32px;
+  position: relative;
+  display: inline-block;
+}
+
+.bl_partners__subTitle::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 2px;
+  background-color: #5b4a9c;
+  margin: 8px auto 0;
+}
+
+.bl_partners__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+}
+
+.bl_partners__item {
+  width: 180px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+}
+
+.bl_partners__item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.bl_partners__item img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+@media screen and (max-width: 768px) {
+  .ly_partners {
+    padding: 60px 16px;
+  }
+
+  .hp_title--partners {
+    margin-bottom: 40px;
+  }
+
+  .bl_partners__subTitle {
+    font-size: 1.25rem;
+    margin-bottom: 24px;
+  }
+
+  .bl_partners__list {
+    gap: 16px;
+  }
+
+  .bl_partners__item {
+    width: 130px;
+    height: 65px;
+    padding: 12px;
   }
 }
