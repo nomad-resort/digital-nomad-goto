@@ -55,6 +55,16 @@
     <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="../assets/css/event-popup.css" />
     <link rel="stylesheet" href="../assets/css/lang-switcher.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500&display=swap" rel="stylesheet" />
+    <style>
+        .bl_newsCard { transition: box-shadow 0.25s, transform 0.25s; }
+        .bl_newsCard:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.10); transform: translateY(-3px); }
+        @media (max-width: 599px) {
+            .bl_newsGrid { grid-template-columns: 1fr !important; }
+        }
+    </style>
 </head>
 
 <body>
@@ -111,46 +121,53 @@
             </div>
         </section>
 
-        <!-- News & Announcements -->
-        <section class="ly_news">
-            <div class="bl_news">
-                <div class="bl_news__header">
-                    <h2 class="hp_title">お知らせ</h2>
+        <!-- News & Announcements Section -->
+        <section class="ly_news" style="padding: 100px 0; background-color: #fafafa;">
+            <div class="bl_news" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+                <div class="bl_newsHeader" style="text-align: center; margin-bottom: 60px;">
+                    <h2 style="font-family: 'Noto Serif JP', serif; font-size: 2.5rem; color: #333; margin-bottom: 10px;">お知らせ</h2>
+                    <p style="color: #888; font-size: 0.9rem; letter-spacing: 0.1em; text-transform: uppercase;">News & Announcements</p>
                 </div>
-                <div class="bl_newsCards">
-                    <div class="bl_newsCard">
-                        <div class="bl_newsCard__meta">
-                            <span class="bl_newsCard__date">2026.05.04</span>
-                            <span class="bl_newsCard__tag bl_newsCard__tag--tour">TOUR</span>
+                
+                <div class="bl_newsGrid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+                    <!-- News Item 1 -->
+                    <article class="bl_newsCard" style="background: #fff; padding: 30px; border: 1px solid #eee; transition: all 0.3s ease; display: flex; flex-direction: column;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                            <span style="font-size: 0.75rem; color: #999;">2026.05.04</span>
+                            <span style="background: #e05c00; color: #fff; font-size: 0.65rem; padding: 2px 8px; font-weight: bold; border-radius: 2px;">TOUR</span>
                         </div>
-                        <p class="bl_newsCard__title">6月ツアー詳細確定。新緑の五島を巡り本来の自分に還る5日間のリトリート。</p>
-                        <a href="https://www.sachi.global/" target="_blank" rel="noopener noreferrer" class="bl_newsCard__link">
-                            詳しく見る
-                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#na1)"><path d="M8 2.5c0 .371.367.925.738 1.39a6.6 6.6 0 0 0 1.7 1.523c.49.3 1.084.587 1.562.587m0 0c-.478 0-1.072.287-1.562.587-.654.4-1.224.924-1.7 1.523C8.367 8.575 8 9.13 8 9.5M12 6H0" stroke="currentColor"/></g><defs><clipPath id="na1"><path fill="currentColor" d="M12 0H0v12h12z"/></clipPath></defs></svg>
+                        <h3 style="font-family: 'Noto Serif JP', serif; font-size: 1.25rem; line-height: 1.5; margin-bottom: 15px; color: #222;">6月ツアー詳細確定。新緑の五島を巡り本来の自分に還る5日間のリトリート。</h3>
+                        <p style="font-size: 0.875rem; color: #666; line-height: 1.6; margin-bottom: 25px;">詳細はsachi.globalにて公開中。定員に達し次第受付を終了します。</p>
+                        <a href="https://www.sachi.global/" target="_blank" style="margin-top: auto; color: #e05c00; text-decoration: none; font-weight: bold; font-size: 0.875rem; display: flex; align-items: center; gap: 5px;">
+                            詳しく見る <span style="font-size: 1.1rem;">→</span>
                         </a>
-                    </div>
-                    <div class="bl_newsCard">
-                        <div class="bl_newsCard__meta">
-                            <span class="bl_newsCard__date">2026.05.04</span>
-                            <span class="bl_newsCard__tag bl_newsCard__tag--tour">TOUR</span>
+                    </article>
+
+                    <!-- News Item 2 -->
+                    <article class="bl_newsCard" style="background: #fff; padding: 30px; border: 1px solid #eee; transition: all 0.3s ease; display: flex; flex-direction: column;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                            <span style="font-size: 0.75rem; color: #999;">2026.05.04</span>
+                            <span style="background: #e05c00; color: #fff; font-size: 0.65rem; padding: 2px 8px; font-weight: bold; border-radius: 2px;">TOUR</span>
                         </div>
-                        <p class="bl_newsCard__title">10月ツアー先行予約開始。秋の味覚とワークライフバランスを楽しむ。</p>
-                        <a href="https://x.nomadresort.jp/goto-islands-2026" target="_blank" rel="noopener noreferrer" class="bl_newsCard__link">
-                            詳しく見る
-                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#na2)"><path d="M8 2.5c0 .371.367.925.738 1.39a6.6 6.6 0 0 0 1.7 1.523c.49.3 1.084.587 1.562.587m0 0c-.478 0-1.072.287-1.562.587-.654.4-1.224.924-1.7 1.523C8.367 8.575 8 9.13 8 9.5M12 6H0" stroke="currentColor"/></g><defs><clipPath id="na2"><path fill="currentColor" d="M12 0H0v12h12z"/></clipPath></defs></svg>
+                        <h3 style="font-family: 'Noto Serif JP', serif; font-size: 1.25rem; line-height: 1.5; margin-bottom: 15px; color: #222;">10月ツアー先行予約開始。秋の味覚とワークライフバランスを楽しむ。</h3>
+                        <p style="font-size: 0.875rem; color: #666; line-height: 1.6; margin-bottom: 25px;">大好評の秋ツアー。デジタルノマドのための特別なプログラムをご用意しました。</p>
+                        <a href="https://x.nomadresort.jp/goto-islands-2026" target="_blank" rel="noopener noreferrer" style="margin-top: auto; color: #e05c00; text-decoration: none; font-weight: bold; font-size: 0.875rem; display: flex; align-items: center; gap: 5px;">
+                            詳しく見る <span style="font-size: 1.1rem;">→</span>
                         </a>
-                    </div>
-                    <div class="bl_newsCard">
-                        <div class="bl_newsCard__meta">
-                            <span class="bl_newsCard__date">2026.05.02</span>
-                            <span class="bl_newsCard__tag bl_newsCard__tag--support">SUPPORT</span>
+                    </article>
+
+                    <!-- News Item 3 -->
+                    <article class="bl_newsCard" style="background: #fff; padding: 30px; border: 1px solid #eee; transition: all 0.3s ease; display: flex; flex-direction: column;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                            <span style="font-size: 0.75rem; color: #999;">2026.05.02</span>
+                            <span style="background: #222; color: #fff; font-size: 0.65rem; padding: 2px 8px; font-weight: bold; border-radius: 2px;">SUPPORT</span>
                         </div>
-                        <p class="bl_newsCard__title">長期滞在サポートプラン更新。</p>
-                        <a href="https://www.instagram.com/p/DWsr3SQDiMe/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer" class="bl_newsCard__link">
-                            詳しく見る
-                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#na3)"><path d="M8 2.5c0 .371.367.925.738 1.39a6.6 6.6 0 0 0 1.7 1.523c.49.3 1.084.587 1.562.587m0 0c-.478 0-1.072.287-1.562.587-.654.4-1.224.924-1.7 1.523C8.367 8.575 8 9.13 8 9.5M12 6H0" stroke="currentColor"/></g><defs><clipPath id="na3"><path fill="currentColor" d="M12 0H0v12h12z"/></clipPath></defs></svg>
+                        <h3 style="font-family: 'Noto Serif JP', serif; font-size: 1.25rem; line-height: 1.5; margin-bottom: 15px; color: #222;">長期滞在サポートプラン更新。より快適なリモートワーク環境を。</h3>
+                        <p style="font-size: 0.875rem; color: #666; line-height: 1.6; margin-bottom: 25px;">1ヶ月以上の滞在者向けに、提携ワークスペースの優先利用枠を拡大しました。</p>
+                        <a href="https://www.instagram.com/p/DWsr3SQDiMe/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer" style="margin-top: auto; color: #222; text-decoration: none; font-weight: bold; font-size: 0.875rem; display: flex; align-items: center; gap: 5px;">
+                            詳しく見る <span style="font-size: 1.1rem;">→</span>
                         </a>
-                    </div>
+                    </article>
                 </div>
             </div>
         </section>
