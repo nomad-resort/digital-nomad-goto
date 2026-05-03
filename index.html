@@ -57,6 +57,16 @@
   <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./assets/css/event-popup.css" />
   <link rel="stylesheet" href="./assets/css/lang-switcher.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    .bl_newsCard { transition: box-shadow 0.25s, transform 0.25s; }
+    .bl_newsCard:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.10); transform: translateY(-3px); }
+    @media (max-width: 599px) {
+      .bl_newsGrid { grid-template-columns: 1fr !important; }
+    }
+  </style>
 </head>
 
 <body>
@@ -110,6 +120,54 @@
           <img src="./assets/image/hero-goto.webp" loading="eager" fetchpriority="high" alt="GOTO ISLANDS" />
         </div>
         <p class="ly_hero__subtitle">Retreat Islands for Digital Nomads</p>
+      </div>
+    </section>
+
+    <!-- News & Announcements Section -->
+    <section class="ly_news" style="padding: 100px 0; background-color: #fafafa;">
+      <div class="bl_news" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+        <div class="bl_newsHeader" style="text-align: center; margin-bottom: 60px;">
+          <h2 style="font-family: 'Noto Serif JP', serif; font-size: 2.5rem; color: #333; margin-bottom: 10px;">News & Announcements</h2>
+          <p style="color: #888; font-size: 0.9rem; letter-spacing: 0.1em; text-transform: uppercase;">Latest Updates</p>
+        </div>
+        <div class="bl_newsGrid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+          <!-- News Item 1 -->
+          <article class="bl_newsCard" style="background: #fff; padding: 30px; border: 1px solid #eee; display: flex; flex-direction: column;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+              <span style="font-size: 0.75rem; color: #999;">2026.05.04</span>
+              <span style="background: #e05c00; color: #fff; font-size: 0.65rem; padding: 2px 8px; font-weight: bold; border-radius: 2px;">TOUR</span>
+            </div>
+            <h3 style="font-family: 'Noto Serif JP', serif; font-size: 1.25rem; line-height: 1.5; margin-bottom: 15px; color: #222;">June Tour Confirmed. A 5-day retreat through the fresh green Goto Islands — rediscover yourself.</h3>
+            <p style="font-size: 0.875rem; color: #666; line-height: 1.6; margin-bottom: 25px;">Details now available at sachi.global. Reservations close when capacity is reached.</p>
+            <a href="https://www.sachi.global/" target="_blank" rel="noopener noreferrer" style="margin-top: auto; color: #e05c00; text-decoration: none; font-weight: bold; font-size: 0.875rem; display: flex; align-items: center; gap: 5px;">
+              Learn More <span style="font-size: 1.1rem;">→</span>
+            </a>
+          </article>
+          <!-- News Item 2 -->
+          <article class="bl_newsCard" style="background: #fff; padding: 30px; border: 1px solid #eee; display: flex; flex-direction: column;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+              <span style="font-size: 0.75rem; color: #999;">2026.05.04</span>
+              <span style="background: #e05c00; color: #fff; font-size: 0.65rem; padding: 2px 8px; font-weight: bold; border-radius: 2px;">TOUR</span>
+            </div>
+            <h3 style="font-family: 'Noto Serif JP', serif; font-size: 1.25rem; line-height: 1.5; margin-bottom: 15px; color: #222;">October Tour Early Reservations Open. Autumn flavors and work-life balance on the islands.</h3>
+            <p style="font-size: 0.875rem; color: #666; line-height: 1.6; margin-bottom: 25px;">Our popular autumn tour returns. A special program crafted for digital nomads.</p>
+            <a href="https://x.nomadresort.jp/goto-islands-2026" target="_blank" rel="noopener noreferrer" style="margin-top: auto; color: #e05c00; text-decoration: none; font-weight: bold; font-size: 0.875rem; display: flex; align-items: center; gap: 5px;">
+              Learn More <span style="font-size: 1.1rem;">→</span>
+            </a>
+          </article>
+          <!-- News Item 3 -->
+          <article class="bl_newsCard" style="background: #fff; padding: 30px; border: 1px solid #eee; display: flex; flex-direction: column;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+              <span style="font-size: 0.75rem; color: #999;">2026.05.02</span>
+              <span style="background: #222; color: #fff; font-size: 0.65rem; padding: 2px 8px; font-weight: bold; border-radius: 2px;">SUPPORT</span>
+            </div>
+            <h3 style="font-family: 'Noto Serif JP', serif; font-size: 1.25rem; line-height: 1.5; margin-bottom: 15px; color: #222;">Long-Stay Support Plan Updated. A more comfortable remote work environment awaits.</h3>
+            <p style="font-size: 0.875rem; color: #666; line-height: 1.6; margin-bottom: 25px;">Priority access to partner workspaces has been expanded for stays of one month or more.</p>
+            <a href="https://www.instagram.com/p/DWsr3SQDiMe/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer" style="margin-top: auto; color: #222; text-decoration: none; font-weight: bold; font-size: 0.875rem; display: flex; align-items: center; gap: 5px;">
+              Learn More <span style="font-size: 1.1rem;">→</span>
+            </a>
+          </article>
+        </div>
       </div>
     </section>
 
