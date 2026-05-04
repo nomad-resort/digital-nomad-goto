@@ -112,6 +112,13 @@
         .bl_workEnvGallery__title { font-family: 'Noto Serif JP', serif; font-size: 1.1rem; color: #222; text-align: center; margin-bottom: 32px; }
         @media (max-width: 768px) { .bl_workEnvFeatures { grid-template-columns: repeat(2, 1fr); } }
         @media (max-width: 480px) { .bl_workEnvFeatures { grid-template-columns: repeat(2, 1fr); } }
+
+        /* Timeline photo thumbnail */
+        .bl_timelineItem__img {
+            display: block; width: 100%; max-width: 240px; height: 140px;
+            object-fit: cover; border-radius: 4px; margin-top: 10px;
+        }
+        @media (max-width: 480px) { .bl_timelineItem__img { max-width: 100%; height: 120px; } }
     </style>
 </head>
 
@@ -287,51 +294,72 @@
                         <h3 class="bl_scheduleCol__title">平日 — Weekday</h3>
                         <div class="bl_timeline">
                             <div class="bl_timelineItem">
-                                <span class="bl_timelineItem__time">07:00</span>
+                                <span class="bl_timelineItem__time">09:00</span>
                                 <span class="bl_timelineItem__dot"></span>
                                 <div class="bl_timelineItem__body">
-                                    <p class="bl_timelineItem__label">朝の海辺へ</p>
-                                    <p class="bl_timelineItem__desc">朝焼けの中、静かな浜辺を散歩。都市の喧騒とは無縁の朝。</p>
+                                    <p class="bl_timelineItem__label">起床</p>
+                                    <p class="bl_timelineItem__desc">コリビングの朝。島の空気を吸いながら一日をスタート。</p>
+                                    <img src="../assets/image/coliving_1.png" alt="コリビング" class="bl_timelineItem__img" loading="lazy" />
                                 </div>
                             </div>
                             <div class="bl_timelineItem">
-                                <span class="bl_timelineItem__time">08:30</span>
+                                <span class="bl_timelineItem__time">10:00</span>
                                 <span class="bl_timelineItem__dot"></span>
                                 <div class="bl_timelineItem__body">
-                                    <p class="bl_timelineItem__label">コワーキングで仕事開始</p>
-                                    <p class="bl_timelineItem__desc">高速Wi-Fi完備のコワーキングへ。海を眺めながら集中できる環境。</p>
+                                    <p class="bl_timelineItem__label">仕事（1Fコワーキング）</p>
+                                    <p class="bl_timelineItem__desc">高速Wi-Fi完備のコワーキングで午前の仕事をスタート。</p>
+                                    <img src="../assets/image/coworking-img1.webp" alt="コワーキング" class="bl_timelineItem__img" loading="lazy" />
                                 </div>
                             </div>
                             <div class="bl_timelineItem">
                                 <span class="bl_timelineItem__time">12:00</span>
                                 <span class="bl_timelineItem__dot"></span>
                                 <div class="bl_timelineItem__body">
-                                    <p class="bl_timelineItem__label">島の食堂でランチ</p>
-                                    <p class="bl_timelineItem__desc">地元の食堂で新鮮な海の幸ランチ。地産地消の豊かな食卓。</p>
+                                    <p class="bl_timelineItem__label">ランチ（五島牛 or 五島豚）</p>
+                                    <p class="bl_timelineItem__desc">島育ちのブランド牛・豚をたっぷり使った贅沢なランチ。</p>
                                 </div>
                             </div>
                             <div class="bl_timelineItem">
-                                <span class="bl_timelineItem__time">14:00</span>
+                                <span class="bl_timelineItem__time">13:00</span>
                                 <span class="bl_timelineItem__dot"></span>
                                 <div class="bl_timelineItem__body">
-                                    <p class="bl_timelineItem__label">フォーカスルームで集中作業</p>
-                                    <p class="bl_timelineItem__desc">個室ブースで重要タスクに集中。静寂の中で思考が深まる。</p>
+                                    <p class="bl_timelineItem__label">オーシャンビューカフェで仕事（Colorit等）</p>
+                                    <p class="bl_timelineItem__desc">海が目の前に広がるカフェへ移動。絶景を眺めながら午後の仕事。</p>
+                                    <img src="../assets/image/colorit%20ocean%20view.jpg" alt="オーシャンビューカフェ" class="bl_timelineItem__img" loading="lazy" />
                                 </div>
                             </div>
                             <div class="bl_timelineItem">
-                                <span class="bl_timelineItem__time">17:30</span>
+                                <span class="bl_timelineItem__time">17:00</span>
                                 <span class="bl_timelineItem__dot"></span>
                                 <div class="bl_timelineItem__body">
-                                    <p class="bl_timelineItem__label">仕事終了・夕日を眺めながら</p>
-                                    <p class="bl_timelineItem__desc">茜色に染まる海を眺め、今日一日を静かに振り返る。</p>
+                                    <p class="bl_timelineItem__label">夕まずめの釣り</p>
+                                    <p class="bl_timelineItem__desc">仕事終わりに防波堤や磯へ。夕焼けの中、竿を垂らす至福の時間。</p>
+                                    <img src="../assets/image/fishing.jpg" alt="釣り" class="bl_timelineItem__img" loading="lazy" />
                                 </div>
                             </div>
                             <div class="bl_timelineItem">
-                                <span class="bl_timelineItem__time">19:30</span>
+                                <span class="bl_timelineItem__time">19:00</span>
                                 <span class="bl_timelineItem__dot"></span>
                                 <div class="bl_timelineItem__body">
-                                    <p class="bl_timelineItem__label">地元の居酒屋でディナー</p>
-                                    <p class="bl_timelineItem__desc">島の料理と地酒を片手に、ローカルや仲間と語らう夜。</p>
+                                    <p class="bl_timelineItem__label">シェアハウスで釣った魚をみんなで調理・ディナー</p>
+                                    <p class="bl_timelineItem__desc">自分で釣った魚を仲間と一緒に料理。島ならではの食卓を囲む。</p>
+                                    <img src="../assets/image/fish.jpg" alt="魚料理" class="bl_timelineItem__img" loading="lazy" />
+                                </div>
+                            </div>
+                            <div class="bl_timelineItem">
+                                <span class="bl_timelineItem__time">21:00</span>
+                                <span class="bl_timelineItem__dot"></span>
+                                <div class="bl_timelineItem__body">
+                                    <p class="bl_timelineItem__label">コリビング個室 or 会議室で仕事</p>
+                                    <p class="bl_timelineItem__desc">静寂の夜、個室や会議室スペースで集中のゴールデンタイム。</p>
+                                </div>
+                            </div>
+                            <div class="bl_timelineItem">
+                                <span class="bl_timelineItem__time">00:00</span>
+                                <span class="bl_timelineItem__dot"></span>
+                                <div class="bl_timelineItem__body">
+                                    <p class="bl_timelineItem__label">就寝</p>
+                                    <p class="bl_timelineItem__desc">潮騒に包まれながら、深い眠りへ。</p>
                                 </div>
                             </div>
                         </div>
@@ -342,51 +370,82 @@
                         <h3 class="bl_scheduleCol__title">休日 — Day Off</h3>
                         <div class="bl_timeline">
                             <div class="bl_timelineItem">
-                                <span class="bl_timelineItem__time">07:00</span>
+                                <span class="bl_timelineItem__time">09:00</span>
                                 <span class="bl_timelineItem__dot"></span>
                                 <div class="bl_timelineItem__body">
-                                    <p class="bl_timelineItem__label">朝のシュノーケリング</p>
-                                    <p class="bl_timelineItem__desc">透明度抜群の海でひと泳ぎ。色とりどりの魚と朝の海を共有。</p>
+                                    <p class="bl_timelineItem__label">起床</p>
+                                    <p class="bl_timelineItem__desc">急ぐ必要のない朝。島の風と光で自然に目が覚める。</p>
                                 </div>
                             </div>
                             <div class="bl_timelineItem">
-                                <span class="bl_timelineItem__time">09:30</span>
+                                <span class="bl_timelineItem__time">10:00</span>
                                 <span class="bl_timelineItem__dot"></span>
                                 <div class="bl_timelineItem__body">
-                                    <p class="bl_timelineItem__label">島のカフェでモーニング</p>
-                                    <p class="bl_timelineItem__desc">地元のカフェでゆったりとした朝食。読書や日記を書く時間。</p>
+                                    <p class="bl_timelineItem__label">コミュニティマネージャーと農作業体験</p>
+                                    <p class="bl_timelineItem__desc">地元の農家さんと一緒に畑仕事。土に触れ、食の原点を知る体験。</p>
+                                    <img src="../assets/image/hervesting.jpg" alt="農作業体験" class="bl_timelineItem__img" loading="lazy" />
                                 </div>
                             </div>
                             <div class="bl_timelineItem">
-                                <span class="bl_timelineItem__time">11:00</span>
+                                <span class="bl_timelineItem__time">14:00</span>
                                 <span class="bl_timelineItem__dot"></span>
                                 <div class="bl_timelineItem__body">
-                                    <p class="bl_timelineItem__label">島内ドライブ・教会巡り</p>
-                                    <p class="bl_timelineItem__desc">レンタカーで世界遺産の教会群や棚田、絶景スポットを巡る。</p>
+                                    <p class="bl_timelineItem__label">ランチ（五島うどん）</p>
+                                    <p class="bl_timelineItem__desc">もちもちの五島うどんをひと杯。島の定番ソウルフード。</p>
+                                    <img src="../assets/image/Goto%20udon.jpg" alt="五島うどん" class="bl_timelineItem__img" loading="lazy" />
                                 </div>
                             </div>
                             <div class="bl_timelineItem">
-                                <span class="bl_timelineItem__time">13:30</span>
+                                <span class="bl_timelineItem__time">15:00</span>
                                 <span class="bl_timelineItem__dot"></span>
                                 <div class="bl_timelineItem__body">
-                                    <p class="bl_timelineItem__label">浜辺で海鮮ランチ</p>
-                                    <p class="bl_timelineItem__desc">地元の漁師さんが獲れたての魚介を振る舞ってくれることも。</p>
+                                    <p class="bl_timelineItem__label">高浜ビーチで一休み</p>
+                                    <p class="bl_timelineItem__desc">日本屈指の透明度を誇る高浜海水浴場でのんびり海を満喫。</p>
+                                    <img src="../assets/image/beach.jpg" alt="高浜ビーチ" class="bl_timelineItem__img" loading="lazy" />
                                 </div>
                             </div>
                             <div class="bl_timelineItem">
-                                <span class="bl_timelineItem__time">15:30</span>
+                                <span class="bl_timelineItem__time">16:00</span>
                                 <span class="bl_timelineItem__dot"></span>
                                 <div class="bl_timelineItem__body">
-                                    <p class="bl_timelineItem__label">トレッキング</p>
-                                    <p class="bl_timelineItem__desc">緑あふれる山道を歩き、頂上から五島の絶景を一望する。</p>
+                                    <p class="bl_timelineItem__label">荒川温泉でリフレッシュ＋近くのカフェで仕事</p>
+                                    <p class="bl_timelineItem__desc">源泉かけ流しの温泉で疲れを癒した後、海沿いのカフェでワーク。</p>
+                                    <img src="../assets/image/working%20ocean%20view.jpg" alt="海沿いカフェワーク" class="bl_timelineItem__img" loading="lazy" />
                                 </div>
                             </div>
                             <div class="bl_timelineItem">
-                                <span class="bl_timelineItem__time">20:30</span>
+                                <span class="bl_timelineItem__time">18:00</span>
                                 <span class="bl_timelineItem__dot"></span>
                                 <div class="bl_timelineItem__body">
-                                    <p class="bl_timelineItem__label">温泉と満天の星空</p>
-                                    <p class="bl_timelineItem__desc">露天風呂からのぞく満天の星。光害のない島だけの贅沢。</p>
+                                    <p class="bl_timelineItem__label">大瀬崎灯台へ夕焼けドライブ</p>
+                                    <p class="bl_timelineItem__desc">断崖に立つ白亜の灯台と、東シナ海に沈む夕日。言葉を失う絶景。</p>
+                                    <img src="../assets/image/sunset%20hiking%20Osezaki%20light%20house.jpg" alt="大瀬崎灯台" class="bl_timelineItem__img" loading="lazy" />
+                                </div>
+                            </div>
+                            <div class="bl_timelineItem">
+                                <span class="bl_timelineItem__time">19:00</span>
+                                <span class="bl_timelineItem__dot"></span>
+                                <div class="bl_timelineItem__body">
+                                    <p class="bl_timelineItem__label">地元の人のお家でバーベキュー</p>
+                                    <p class="bl_timelineItem__desc">島のコミュニティに招かれ、地元の人と食卓を囲む特別な夜。</p>
+                                    <img src="../assets/image/community.jpg" alt="コミュニティBBQ" class="bl_timelineItem__img" loading="lazy" />
+                                </div>
+                            </div>
+                            <div class="bl_timelineItem">
+                                <span class="bl_timelineItem__time">21:00</span>
+                                <span class="bl_timelineItem__dot"></span>
+                                <div class="bl_timelineItem__body">
+                                    <p class="bl_timelineItem__label">鬼岳で星空観察</p>
+                                    <p class="bl_timelineItem__desc">光害のない五島の夜空はプラネタリウム級。鬼岳の草原から満天の星を見上げる。</p>
+                                    <img src="../assets/image/stargazer.jpg" alt="星空観察" class="bl_timelineItem__img" loading="lazy" />
+                                </div>
+                            </div>
+                            <div class="bl_timelineItem">
+                                <span class="bl_timelineItem__time">00:00</span>
+                                <span class="bl_timelineItem__dot"></span>
+                                <div class="bl_timelineItem__body">
+                                    <p class="bl_timelineItem__label">就寝</p>
+                                    <p class="bl_timelineItem__desc">充実した一日の余韻に浸りながら、静かに眠りにつく。</p>
                                 </div>
                             </div>
                         </div>
