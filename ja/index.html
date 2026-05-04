@@ -59,11 +59,59 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500&display=swap" rel="stylesheet" />
     <style>
+        /* News cards */
         .bl_newsCard { transition: box-shadow 0.25s, transform 0.25s; }
         .bl_newsCard:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.10); transform: translateY(-3px); }
-        @media (max-width: 599px) {
-            .bl_newsGrid { grid-template-columns: 1fr !important; }
+        @media (max-width: 599px) { .bl_newsGrid { grid-template-columns: 1fr !important; } }
+
+        /* ── Schedule Section ── */
+        .ly_schedule { padding: 100px 0; background: #fff; }
+        .bl_schedule { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        .bl_schedule__header { text-align: center; margin-bottom: 64px; }
+        .bl_schedule__subtitle { color: #999; font-size: 0.85rem; letter-spacing: 0.15em; text-transform: uppercase; margin-top: 10px; }
+        .bl_scheduleGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 48px; }
+        .bl_scheduleCol__title {
+            font-family: 'Noto Serif JP', serif; font-size: 1.05rem; letter-spacing: 0.12em;
+            color: #459ac0; text-align: center; padding-bottom: 20px;
+            border-bottom: 1px solid #e4e4e4; margin-bottom: 0;
         }
+        .bl_timeline { position: relative; padding: 28px 0; }
+        .bl_timeline::before {
+            content: ''; position: absolute; left: 50px; top: 0; bottom: 0;
+            width: 1px; background: linear-gradient(to bottom, transparent, #d8d8d8 8%, #d8d8d8 92%, transparent);
+        }
+        .bl_timelineItem { display: flex; align-items: flex-start; gap: 14px; padding: 13px 0; position: relative; }
+        .bl_timelineItem__time { width: 38px; font-size: 0.7rem; color: #aaa; text-align: right; padding-top: 4px; flex-shrink: 0; line-height: 1; letter-spacing: 0.02em; }
+        .bl_timelineItem__dot {
+            width: 9px; height: 9px; border-radius: 50%; background: #fff;
+            border: 2px solid #459ac0; flex-shrink: 0; margin-top: 5px; position: relative; z-index: 1;
+        }
+        .bl_timelineItem__body { flex: 1; }
+        .bl_timelineItem__label { font-size: 0.875rem; font-weight: bold; color: #1c1c1c; margin-bottom: 2px; line-height: 1.4; }
+        .bl_timelineItem__desc { font-size: 0.78rem; color: #999; line-height: 1.55; }
+        @media (max-width: 680px) {
+            .bl_scheduleGrid { grid-template-columns: 1fr; gap: 48px 0; }
+            .bl_timeline::before { left: 48px; }
+        }
+
+        /* ── Work Environment Section ── */
+        .ly_work_environment { padding: 100px 0; background: #f5f4f0; }
+        .bl_workEnv { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        .bl_workEnv__header { text-align: center; margin-bottom: 64px; }
+        .bl_workEnv__subtitle { color: #999; font-size: 0.85rem; letter-spacing: 0.15em; text-transform: uppercase; margin-top: 10px; }
+        .bl_workEnvFeatures { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 72px; }
+        .bl_workEnvCard {
+            background: #fff; padding: 36px 20px 28px; text-align: center;
+            border: 1px solid #ebebeb; transition: box-shadow 0.2s, transform 0.2s;
+        }
+        .bl_workEnvCard:hover { box-shadow: 0 6px 24px rgba(0,0,0,0.08); transform: translateY(-2px); }
+        .bl_workEnvCard__icon { width: 44px; height: 44px; margin: 0 auto 18px; color: #459ac0; display: block; }
+        .bl_workEnvCard__title { font-family: 'Noto Serif JP', serif; font-size: 0.95rem; color: #222; margin-bottom: 8px; }
+        .bl_workEnvCard__desc { font-size: 0.78rem; color: #888; line-height: 1.7; }
+        .bl_workEnvGallery { background: #fff; padding: 48px 40px; border: 1px solid #ebebeb; }
+        .bl_workEnvGallery__title { font-family: 'Noto Serif JP', serif; font-size: 1.1rem; color: #222; text-align: center; margin-bottom: 32px; }
+        @media (max-width: 768px) { .bl_workEnvFeatures { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 480px) { .bl_workEnvFeatures { grid-template-columns: repeat(2, 1fr); } }
     </style>
 </head>
 
@@ -172,6 +220,7 @@
             </div>
         </section>
 
+        <!-- ════ Why Goto ════ -->
         <section class="ly_feature">
             <div class="bl_feature">
                 <div class="bl_featureHeader">
@@ -224,6 +273,200 @@
             </div>
         </section>
 
+        <!-- ════ A day in Goto ════ -->
+        <section class="ly_schedule">
+            <div class="bl_schedule">
+                <div class="bl_schedule__header">
+                    <h2 style="font-family:'Noto Serif JP',serif; font-size:2.2rem; color:#222;">五島での一日</h2>
+                    <p class="bl_schedule__subtitle">A day in Goto</p>
+                </div>
+                <div class="bl_scheduleGrid">
+
+                    <!-- Weekday -->
+                    <div class="bl_scheduleCol">
+                        <h3 class="bl_scheduleCol__title">平日 — Weekday</h3>
+                        <div class="bl_timeline">
+                            <div class="bl_timelineItem">
+                                <span class="bl_timelineItem__time">07:00</span>
+                                <span class="bl_timelineItem__dot"></span>
+                                <div class="bl_timelineItem__body">
+                                    <p class="bl_timelineItem__label">朝の海辺へ</p>
+                                    <p class="bl_timelineItem__desc">朝焼けの中、静かな浜辺を散歩。都市の喧騒とは無縁の朝。</p>
+                                </div>
+                            </div>
+                            <div class="bl_timelineItem">
+                                <span class="bl_timelineItem__time">08:30</span>
+                                <span class="bl_timelineItem__dot"></span>
+                                <div class="bl_timelineItem__body">
+                                    <p class="bl_timelineItem__label">コワーキングで仕事開始</p>
+                                    <p class="bl_timelineItem__desc">高速Wi-Fi完備のコワーキングへ。海を眺めながら集中できる環境。</p>
+                                </div>
+                            </div>
+                            <div class="bl_timelineItem">
+                                <span class="bl_timelineItem__time">12:00</span>
+                                <span class="bl_timelineItem__dot"></span>
+                                <div class="bl_timelineItem__body">
+                                    <p class="bl_timelineItem__label">島の食堂でランチ</p>
+                                    <p class="bl_timelineItem__desc">地元の食堂で新鮮な海の幸ランチ。地産地消の豊かな食卓。</p>
+                                </div>
+                            </div>
+                            <div class="bl_timelineItem">
+                                <span class="bl_timelineItem__time">14:00</span>
+                                <span class="bl_timelineItem__dot"></span>
+                                <div class="bl_timelineItem__body">
+                                    <p class="bl_timelineItem__label">フォーカスルームで集中作業</p>
+                                    <p class="bl_timelineItem__desc">個室ブースで重要タスクに集中。静寂の中で思考が深まる。</p>
+                                </div>
+                            </div>
+                            <div class="bl_timelineItem">
+                                <span class="bl_timelineItem__time">17:30</span>
+                                <span class="bl_timelineItem__dot"></span>
+                                <div class="bl_timelineItem__body">
+                                    <p class="bl_timelineItem__label">仕事終了・夕日を眺めながら</p>
+                                    <p class="bl_timelineItem__desc">茜色に染まる海を眺め、今日一日を静かに振り返る。</p>
+                                </div>
+                            </div>
+                            <div class="bl_timelineItem">
+                                <span class="bl_timelineItem__time">19:30</span>
+                                <span class="bl_timelineItem__dot"></span>
+                                <div class="bl_timelineItem__body">
+                                    <p class="bl_timelineItem__label">地元の居酒屋でディナー</p>
+                                    <p class="bl_timelineItem__desc">島の料理と地酒を片手に、ローカルや仲間と語らう夜。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Day Off -->
+                    <div class="bl_scheduleCol">
+                        <h3 class="bl_scheduleCol__title">休日 — Day Off</h3>
+                        <div class="bl_timeline">
+                            <div class="bl_timelineItem">
+                                <span class="bl_timelineItem__time">07:00</span>
+                                <span class="bl_timelineItem__dot"></span>
+                                <div class="bl_timelineItem__body">
+                                    <p class="bl_timelineItem__label">朝のシュノーケリング</p>
+                                    <p class="bl_timelineItem__desc">透明度抜群の海でひと泳ぎ。色とりどりの魚と朝の海を共有。</p>
+                                </div>
+                            </div>
+                            <div class="bl_timelineItem">
+                                <span class="bl_timelineItem__time">09:30</span>
+                                <span class="bl_timelineItem__dot"></span>
+                                <div class="bl_timelineItem__body">
+                                    <p class="bl_timelineItem__label">島のカフェでモーニング</p>
+                                    <p class="bl_timelineItem__desc">地元のカフェでゆったりとした朝食。読書や日記を書く時間。</p>
+                                </div>
+                            </div>
+                            <div class="bl_timelineItem">
+                                <span class="bl_timelineItem__time">11:00</span>
+                                <span class="bl_timelineItem__dot"></span>
+                                <div class="bl_timelineItem__body">
+                                    <p class="bl_timelineItem__label">島内ドライブ・教会巡り</p>
+                                    <p class="bl_timelineItem__desc">レンタカーで世界遺産の教会群や棚田、絶景スポットを巡る。</p>
+                                </div>
+                            </div>
+                            <div class="bl_timelineItem">
+                                <span class="bl_timelineItem__time">13:30</span>
+                                <span class="bl_timelineItem__dot"></span>
+                                <div class="bl_timelineItem__body">
+                                    <p class="bl_timelineItem__label">浜辺で海鮮ランチ</p>
+                                    <p class="bl_timelineItem__desc">地元の漁師さんが獲れたての魚介を振る舞ってくれることも。</p>
+                                </div>
+                            </div>
+                            <div class="bl_timelineItem">
+                                <span class="bl_timelineItem__time">15:30</span>
+                                <span class="bl_timelineItem__dot"></span>
+                                <div class="bl_timelineItem__body">
+                                    <p class="bl_timelineItem__label">トレッキング</p>
+                                    <p class="bl_timelineItem__desc">緑あふれる山道を歩き、頂上から五島の絶景を一望する。</p>
+                                </div>
+                            </div>
+                            <div class="bl_timelineItem">
+                                <span class="bl_timelineItem__time">20:30</span>
+                                <span class="bl_timelineItem__dot"></span>
+                                <div class="bl_timelineItem__body">
+                                    <p class="bl_timelineItem__label">温泉と満天の星空</p>
+                                    <p class="bl_timelineItem__desc">露天風呂からのぞく満天の星。光害のない島だけの贅沢。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ════ Built for Remote Work ════ -->
+        <section class="ly_work_environment">
+            <div class="bl_workEnv">
+                <div class="bl_workEnv__header">
+                    <h2 style="font-family:'Noto Serif JP',serif; font-size:2.2rem; color:#222;">リモートワーク環境</h2>
+                    <p class="bl_workEnv__subtitle">Built for Remote Work</p>
+                </div>
+
+                <!-- Feature grid -->
+                <div class="bl_workEnvFeatures">
+                    <div class="bl_workEnvCard">
+                        <svg class="bl_workEnvCard__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1" fill="currentColor" stroke="none"/>
+                        </svg>
+                        <p class="bl_workEnvCard__title">高速Wi-Fi</p>
+                        <p class="bl_workEnvCard__desc">島内複数箇所で安定した高速回線を完備。ビデオ会議も快適に。</p>
+                    </div>
+                    <div class="bl_workEnvCard">
+                        <svg class="bl_workEnvCard__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <rect x="2" y="3" width="20" height="14" rx="2"/><line x1="2" y1="20" x2="22" y2="20"/><line x1="8" y1="17" x2="8" y2="20"/><line x1="16" y1="17" x2="16" y2="20"/>
+                        </svg>
+                        <p class="bl_workEnvCard__title">コワーキングスペース</p>
+                        <p class="bl_workEnvCard__desc">開放感ある共有スペース。地元の人やノマド仲間と繋がれる場所。</p>
+                    </div>
+                    <div class="bl_workEnvCard">
+                        <svg class="bl_workEnvCard__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/>
+                        </svg>
+                        <p class="bl_workEnvCard__title">集中作業ルーム</p>
+                        <p class="bl_workEnvCard__desc">個室ブースで完全集中。大事な商談や深い思考作業に最適。</p>
+                    </div>
+                    <div class="bl_workEnvCard">
+                        <svg class="bl_workEnvCard__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <circle cx="12" cy="6" r="3"/><path d="M3 20c2.5-3 5-3 7.5 0s5 3 7.5 0"/><path d="M3 16c2.5-3 5-3 7.5 0s5 3 7.5 0"/>
+                        </svg>
+                        <p class="bl_workEnvCard__title">オーシャンビュー</p>
+                        <p class="bl_workEnvCard__desc">窓の外は五島の青い海。最高のロケーションで仕事の質が上がる。</p>
+                    </div>
+                </div>
+
+                <!-- Coworking gallery (from former ly_coworking) -->
+                <div class="bl_workEnvGallery">
+                    <h3 class="bl_workEnvGallery__title">コワーキングスペース一覧</h3>
+                    <div class="bl_gallerySwiper">
+                        <div class="swiper gallerySwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="../assets/image/coworking-img1.webp" alt="コワーキングスペース 1" /></div>
+                                <div class="swiper-slide"><img src="../assets/image/coworking-img2.webp" alt="コワーキングスペース 2" /></div>
+                                <div class="swiper-slide"><img src="../assets/image/coworking-img3.webp" alt="コワーキングスペース 3" /></div>
+                                <div class="swiper-slide"><img src="../assets/image/coworking-img4.webp" alt="コワーキングスペース 4" /></div>
+                                <div class="swiper-slide"><img src="../assets/image/coworking-img5.webp" alt="コワーキングスペース 5" /></div>
+                                <div class="swiper-slide"><img src="../assets/image/coworking-img6.webp" alt="コワーキングスペース 6" /></div>
+                                <div class="swiper-slide"><img src="../assets/image/coworking-img7.webp" alt="コワーキングスペース 7" /></div>
+                                <div class="swiper-slide"><img src="../assets/image/coworking-img8.webp" alt="コワーキングスペース 8" /></div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-buttons">
+                                <div class="swiper-button-prev"><img loading="lazy" src="../assets/image/swiper-arrow.svg" alt="" /></div>
+                                <div class="swiper-button-next"><img loading="lazy" src="../assets/image/swiper-arrow.svg" alt="" /></div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="link_btn" href="https://vast-soul-1ed.notion.site/Workspace-Goto-islands-26f1f96a364380efbcc5c6d767dd70b7?source=copy_link">
+                        <b>おすすめのコワーキングスペース（Notion）</b>
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#wa1)"><path d="M8 2.5c0 .371.367.925.738 1.39a6.6 6.6 0 0 0 1.7 1.523c.49.3 1.084.587 1.562.587m0 0c-.478 0-1.072.287-1.562.587-.654.4-1.224.924-1.7 1.523C8.367 8.575 8 9.13 8 9.5M12 6H0" stroke="#fff"/></g><defs><clipPath id="wa1"><path fill="#fff" d="M12 0H0v12h12z"/></clipPath></defs></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ════ Community ════ -->
         <section class="ly_culture">
             <div class="bl_culture">
                 <div class="bl_cultureTop">
@@ -420,67 +663,6 @@
                     <p>
                         <b>おすすめの宿泊施設<br>（Notion）</b>
                     </p>
-                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#link_arr)">
-                            <path
-                                d="M8 2.5c0 .371.367.925.738 1.39a6.6 6.6 0 0 0 1.7 1.523c.49.3 1.084.587 1.562.587m0 0c-.478 0-1.072.287-1.562.587-.654.4-1.224.924-1.7 1.523C8.367 8.575 8 9.13 8 9.5M12 6H0"
-                                stroke="#fff" />
-                        </g>
-                        <defs>
-                            <clipPath id="link_arr">
-                                <path fill="#fff" d="M12 0H0v12h12z" />
-                            </clipPath>
-                        </defs>
-                    </svg>
-                </a>
-            </div>
-        </section>
-
-        <section class="ly_coworking">
-            <div class="bl_accommodation">
-                <h2 class="hp_title">コワーキングスペース</h2>
-                <div class="bl_gallerySwiper">
-                    <div class="swiper gallerySwiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <img src="../assets/image/coworking-img1.webp" alt="コワーキングスペース 1" />
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="../assets/image/coworking-img2.webp" alt="コワーキングスペース 2" />
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="../assets/image/coworking-img3.webp" alt="コワーキングスペース 3" />
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="../assets/image/coworking-img4.webp" alt="コワーキングスペース 4" />
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="../assets/image/coworking-img5.webp" alt="コワーキングスペース 5" />
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="../assets/image/coworking-img6.webp" alt="コワーキングスペース 6" />
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="../assets/image/coworking-img7.webp" alt="コワーキングスペース 7" />
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="../assets/image/coworking-img8.webp" alt="コワーキングスペース 8" />
-                            </div>
-                        </div>
-                        <div class="swiper-pagination"></div>
-                        <div class="swiper-buttons">
-                            <div class="swiper-button-prev">
-                                <img loading="lazy" src="../assets/image/swiper-arrow.svg" alt="" />
-                            </div>
-                            <div class="swiper-button-next">
-                                <img loading="lazy" src="../assets/image/swiper-arrow.svg" alt="" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <a class="link_btn"
-                    href="https://vast-soul-1ed.notion.site/Workspace-Goto-islands-26f1f96a364380efbcc5c6d767dd70b7?source=copy_link">
-                    <b>おすすめのコワーキングスペース<br>（Notion）</b>
                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#link_arr)">
                             <path
