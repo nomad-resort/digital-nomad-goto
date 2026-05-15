@@ -66,6 +66,41 @@
     @media (max-width: 599px) {
       .bl_newsGrid { grid-template-columns: 1fr !important; }
     }
+
+    /* ── Schedule Section ── */
+    .ly_schedule { padding: 100px 0; background: #fff; }
+    .bl_schedule { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+    .bl_schedule__header { text-align: center; margin-bottom: 64px; }
+    .bl_schedule__subtitle { color: #999; font-size: 0.85rem; letter-spacing: 0.15em; text-transform: uppercase; margin-top: 10px; }
+    .bl_scheduleGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 48px; }
+    .bl_scheduleCol__title {
+      font-family: 'Noto Serif JP', serif; font-size: 1.05rem; letter-spacing: 0.12em;
+      color: #459ac0; text-align: center; padding-bottom: 20px;
+      border-bottom: 1px solid #e4e4e4; margin-bottom: 0;
+    }
+    .bl_timeline { position: relative; padding: 28px 0; }
+    .bl_timeline::before {
+      content: ''; position: absolute; left: 50px; top: 0; bottom: 0;
+      width: 1px; background: linear-gradient(to bottom, transparent, #d8d8d8 8%, #d8d8d8 92%, transparent);
+    }
+    .bl_timelineItem { display: flex; align-items: flex-start; gap: 14px; padding: 13px 0; position: relative; }
+    .bl_timelineItem__time { width: 38px; font-size: 0.7rem; color: #aaa; text-align: right; padding-top: 4px; flex-shrink: 0; line-height: 1; letter-spacing: 0.02em; }
+    .bl_timelineItem__dot {
+      width: 9px; height: 9px; border-radius: 50%; background: #fff;
+      border: 2px solid #459ac0; flex-shrink: 0; margin-top: 5px; position: relative; z-index: 1;
+    }
+    .bl_timelineItem__body { flex: 1; }
+    .bl_timelineItem__label { font-size: 0.875rem; font-weight: bold; color: #1c1c1c; margin-bottom: 2px; line-height: 1.4; }
+    .bl_timelineItem__desc { font-size: 0.78rem; color: #999; line-height: 1.55; }
+    .bl_timelineItem__img {
+      display: block; width: 100%; max-width: 240px; height: 140px;
+      object-fit: cover; border-radius: 4px; margin-top: 10px;
+    }
+    @media (max-width: 680px) {
+      .bl_scheduleGrid { grid-template-columns: 1fr; gap: 48px 0; }
+      .bl_timeline::before { left: 48px; }
+    }
+    @media (max-width: 480px) { .bl_timelineItem__img { max-width: 100%; height: 120px; } }
   </style>
 </head>
 
@@ -221,6 +256,182 @@
             <p>Escape to</p>
             <p>Quiet, Ghibli Islands.</p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════ A day in Goto ════ -->
+    <section class="ly_schedule">
+      <div class="bl_schedule">
+        <div class="bl_schedule__header">
+          <h2 style="font-family:'Noto Serif JP',serif; font-size:2.2rem; color:#222;">A Day in Goto</h2>
+          <p class="bl_schedule__subtitle">Life on the Island</p>
+        </div>
+        <div class="bl_scheduleGrid">
+
+          <!-- Weekday -->
+          <div class="bl_scheduleCol">
+            <h3 class="bl_scheduleCol__title">Weekday</h3>
+            <div class="bl_timeline">
+              <div class="bl_timelineItem">
+                <span class="bl_timelineItem__time">09:00</span>
+                <span class="bl_timelineItem__dot"></span>
+                <div class="bl_timelineItem__body">
+                  <p class="bl_timelineItem__label">Wake Up</p>
+                  <p class="bl_timelineItem__desc">Rise with the island air. Your coliving morning begins with the quiet sound of waves.</p>
+                  <img src="./assets/image/coliving_1.jpg" alt="Coliving" class="bl_timelineItem__img" loading="lazy" />
+                </div>
+              </div>
+              <div class="bl_timelineItem">
+                <span class="bl_timelineItem__time">10:00</span>
+                <span class="bl_timelineItem__dot"></span>
+                <div class="bl_timelineItem__body">
+                  <p class="bl_timelineItem__label">Work at Coworking Space</p>
+                  <p class="bl_timelineItem__desc">Start your morning session at our high-speed Wi-Fi coworking space.</p>
+                  <img src="./assets/image/hero-img6.webp" alt="Coworking" class="bl_timelineItem__img" loading="lazy" />
+                </div>
+              </div>
+              <div class="bl_timelineItem">
+                <span class="bl_timelineItem__time">12:00</span>
+                <span class="bl_timelineItem__dot"></span>
+                <div class="bl_timelineItem__body">
+                  <p class="bl_timelineItem__label">Lunch at a Local Café</p>
+                  <p class="bl_timelineItem__desc">Follow community word-of-mouth to a local spot only insiders know.</p>
+                  <img src="./assets/image/hero-img2.webp" alt="Lunch" class="bl_timelineItem__img" loading="lazy" />
+                </div>
+              </div>
+              <div class="bl_timelineItem">
+                <span class="bl_timelineItem__time">13:00</span>
+                <span class="bl_timelineItem__dot"></span>
+                <div class="bl_timelineItem__body">
+                  <p class="bl_timelineItem__label">Afternoon Work — Ocean View Café (Colorit)</p>
+                  <p class="bl_timelineItem__desc">Move to a café with the sea right before you. Work with a view that takes your breath away.</p>
+                  <img src="./assets/image/colorit%20ocean%20view.jpg" alt="Ocean View Café" class="bl_timelineItem__img" loading="lazy" />
+                </div>
+              </div>
+              <div class="bl_timelineItem">
+                <span class="bl_timelineItem__time">17:00</span>
+                <span class="bl_timelineItem__dot"></span>
+                <div class="bl_timelineItem__body">
+                  <p class="bl_timelineItem__label">Evening Fishing</p>
+                  <p class="bl_timelineItem__desc">Head to the pier or rocky shore after work. Cast your line in the golden hour sunset.</p>
+                  <img src="./assets/image/fishing.jpg" alt="Fishing" class="bl_timelineItem__img" loading="lazy" />
+                </div>
+              </div>
+              <div class="bl_timelineItem">
+                <span class="bl_timelineItem__time">19:00</span>
+                <span class="bl_timelineItem__dot"></span>
+                <div class="bl_timelineItem__body">
+                  <p class="bl_timelineItem__label">Cook & Dine Together at the Sharehouse</p>
+                  <p class="bl_timelineItem__desc">Cook your own catch with housemates. A dinner table only the island can offer.</p>
+                  <img src="./assets/image/fish.jpg" alt="Dinner" class="bl_timelineItem__img" loading="lazy" />
+                </div>
+              </div>
+              <div class="bl_timelineItem">
+                <span class="bl_timelineItem__time">21:00</span>
+                <span class="bl_timelineItem__dot"></span>
+                <div class="bl_timelineItem__body">
+                  <p class="bl_timelineItem__label">Evening Focus Work</p>
+                  <p class="bl_timelineItem__desc">The quiet of night, the golden hour of concentration. Private rooms and meeting spaces await.</p>
+                </div>
+              </div>
+              <div class="bl_timelineItem">
+                <span class="bl_timelineItem__time">00:00</span>
+                <span class="bl_timelineItem__dot"></span>
+                <div class="bl_timelineItem__body">
+                  <p class="bl_timelineItem__label">Sleep</p>
+                  <p class="bl_timelineItem__desc">Drift into deep sleep wrapped in the sound of the sea.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Day Off -->
+          <div class="bl_scheduleCol">
+            <h3 class="bl_scheduleCol__title">Day Off</h3>
+            <div class="bl_timeline">
+              <div class="bl_timelineItem">
+                <span class="bl_timelineItem__time">09:00</span>
+                <span class="bl_timelineItem__dot"></span>
+                <div class="bl_timelineItem__body">
+                  <p class="bl_timelineItem__label">Wake Up</p>
+                  <p class="bl_timelineItem__desc">No rush. Wake naturally with the island breeze and morning light.</p>
+                </div>
+              </div>
+              <div class="bl_timelineItem">
+                <span class="bl_timelineItem__time">10:00</span>
+                <span class="bl_timelineItem__dot"></span>
+                <div class="bl_timelineItem__body">
+                  <p class="bl_timelineItem__label">Farm Experience with Community Manager</p>
+                  <p class="bl_timelineItem__desc">Work the fields alongside local farmers. Touch the earth, discover where food begins.</p>
+                  <img src="./assets/image/hervesting.jpg" alt="Farming" class="bl_timelineItem__img" loading="lazy" />
+                </div>
+              </div>
+              <div class="bl_timelineItem">
+                <span class="bl_timelineItem__time">14:00</span>
+                <span class="bl_timelineItem__dot"></span>
+                <div class="bl_timelineItem__body">
+                  <p class="bl_timelineItem__label">Lunch — Goto Udon</p>
+                  <p class="bl_timelineItem__desc">A bowl of chewy Goto udon. The island's beloved soul food.</p>
+                  <img src="./assets/image/Goto%20udon.jpg" alt="Goto Udon" class="bl_timelineItem__img" loading="lazy" />
+                </div>
+              </div>
+              <div class="bl_timelineItem">
+                <span class="bl_timelineItem__time">15:00</span>
+                <span class="bl_timelineItem__dot"></span>
+                <div class="bl_timelineItem__body">
+                  <p class="bl_timelineItem__label">Relax at Takahama Beach</p>
+                  <p class="bl_timelineItem__desc">Enjoy the sea at one of Japan's most crystal-clear beaches.</p>
+                  <img src="./assets/image/beach.jpg" alt="Takahama Beach" class="bl_timelineItem__img" loading="lazy" />
+                </div>
+              </div>
+              <div class="bl_timelineItem">
+                <span class="bl_timelineItem__time">16:00</span>
+                <span class="bl_timelineItem__dot"></span>
+                <div class="bl_timelineItem__body">
+                  <p class="bl_timelineItem__label">Arakawa Onsen + Café Work</p>
+                  <p class="bl_timelineItem__desc">Soak in natural hot spring water, then work at an oceanside café.</p>
+                  <img src="./assets/image/working%20ocean%20view.jpg" alt="Oceanside Café Work" class="bl_timelineItem__img" loading="lazy" />
+                </div>
+              </div>
+              <div class="bl_timelineItem">
+                <span class="bl_timelineItem__time">18:00</span>
+                <span class="bl_timelineItem__dot"></span>
+                <div class="bl_timelineItem__body">
+                  <p class="bl_timelineItem__label">Sunset Drive to Osezaki Lighthouse</p>
+                  <p class="bl_timelineItem__desc">A white lighthouse on the cliff, the East China Sea glowing gold. A view that leaves you speechless.</p>
+                  <img src="./assets/image/sunset%20hiking%20Osezaki%20light%20house.jpg" alt="Osezaki Lighthouse" class="bl_timelineItem__img" loading="lazy" />
+                </div>
+              </div>
+              <div class="bl_timelineItem">
+                <span class="bl_timelineItem__time">19:00</span>
+                <span class="bl_timelineItem__dot"></span>
+                <div class="bl_timelineItem__body">
+                  <p class="bl_timelineItem__label">BBQ at a Local's Home</p>
+                  <p class="bl_timelineItem__desc">Invited into the island community. A special evening sharing a table with locals.</p>
+                  <img src="./assets/image/community.jpg" alt="Community BBQ" class="bl_timelineItem__img" loading="lazy" />
+                </div>
+              </div>
+              <div class="bl_timelineItem">
+                <span class="bl_timelineItem__time">21:00</span>
+                <span class="bl_timelineItem__dot"></span>
+                <div class="bl_timelineItem__body">
+                  <p class="bl_timelineItem__label">Stargazing at Onidake</p>
+                  <p class="bl_timelineItem__desc">Free from light pollution, Goto's night sky rivals a planetarium. A sea of stars from the Onidake meadow.</p>
+                  <img src="./assets/image/stargazer.jpg" alt="Stargazing" class="bl_timelineItem__img" loading="lazy" />
+                </div>
+              </div>
+              <div class="bl_timelineItem">
+                <span class="bl_timelineItem__time">00:00</span>
+                <span class="bl_timelineItem__dot"></span>
+                <div class="bl_timelineItem__body">
+                  <p class="bl_timelineItem__label">Sleep</p>
+                  <p class="bl_timelineItem__desc">Quietly drift off, wrapped in the memories of a full and beautiful day.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
