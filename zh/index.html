@@ -64,6 +64,41 @@
         @media (max-width: 599px) {
             .bl_newsGrid { grid-template-columns: 1fr !important; }
         }
+
+        /* ── Schedule Section ── */
+        .ly_schedule { padding: 100px 0; background: #fff; }
+        .bl_schedule { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        .bl_schedule__header { text-align: center; margin-bottom: 64px; }
+        .bl_schedule__subtitle { color: #999; font-size: 0.85rem; letter-spacing: 0.15em; text-transform: uppercase; margin-top: 10px; }
+        .bl_scheduleGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 48px; }
+        .bl_scheduleCol__title {
+            font-family: 'Noto Serif JP', serif; font-size: 1.05rem; letter-spacing: 0.12em;
+            color: #459ac0; text-align: center; padding-bottom: 20px;
+            border-bottom: 1px solid #e4e4e4; margin-bottom: 0;
+        }
+        .bl_timeline { position: relative; padding: 28px 0; }
+        .bl_timeline::before {
+            content: ''; position: absolute; left: 50px; top: 0; bottom: 0;
+            width: 1px; background: linear-gradient(to bottom, transparent, #d8d8d8 8%, #d8d8d8 92%, transparent);
+        }
+        .bl_timelineItem { display: flex; align-items: flex-start; gap: 14px; padding: 13px 0; position: relative; }
+        .bl_timelineItem__time { width: 38px; font-size: 0.7rem; color: #aaa; text-align: right; padding-top: 4px; flex-shrink: 0; line-height: 1; letter-spacing: 0.02em; }
+        .bl_timelineItem__dot {
+            width: 9px; height: 9px; border-radius: 50%; background: #fff;
+            border: 2px solid #459ac0; flex-shrink: 0; margin-top: 5px; position: relative; z-index: 1;
+        }
+        .bl_timelineItem__body { flex: 1; }
+        .bl_timelineItem__label { font-size: 0.875rem; font-weight: bold; color: #1c1c1c; margin-bottom: 2px; line-height: 1.4; }
+        .bl_timelineItem__desc { font-size: 0.78rem; color: #999; line-height: 1.55; }
+        .bl_timelineItem__img {
+            display: block; width: 100%; max-width: 240px; height: 140px;
+            object-fit: cover; border-radius: 4px; margin-top: 10px;
+        }
+        @media (max-width: 680px) {
+            .bl_scheduleGrid { grid-template-columns: 1fr; gap: 48px 0; }
+            .bl_timeline::before { left: 48px; }
+        }
+        @media (max-width: 480px) { .bl_timelineItem__img { max-width: 100%; height: 120px; } }
     </style>
 </head>
 
@@ -217,6 +252,182 @@
                         <p>Escape to</p>
                         <p>Quiet, Ghibli Islands.</p>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ════ A day in Goto ════ -->
+        <section class="ly_schedule">
+            <div class="bl_schedule">
+                <div class="bl_schedule__header">
+                    <h2 style="font-family:'Noto Serif JP',serif; font-size:2.2rem; color:#222;">五岛群岛的一天</h2>
+                    <p class="bl_schedule__subtitle">A day in Goto</p>
+                </div>
+                <div class="bl_scheduleGrid">
+
+                    <!-- Weekday -->
+                    <div class="bl_scheduleCol">
+                        <h3 class="bl_scheduleCol__title">工作日 — Weekday</h3>
+                        <div class="bl_timeline">
+                            <div class="bl_timelineItem">
+                                <span class="bl_timelineItem__time">09:00</span>
+                                <span class="bl_timelineItem__dot"></span>
+                                <div class="bl_timelineItem__body">
+                                    <p class="bl_timelineItem__label">起床</p>
+                                    <p class="bl_timelineItem__desc">在共居空间迎来清晨。呼吸着岛上的空气，开始新的一天。</p>
+                                    <img src="../assets/image/coliving_1.jpg" alt="共居空间" class="bl_timelineItem__img" loading="lazy" />
+                                </div>
+                            </div>
+                            <div class="bl_timelineItem">
+                                <span class="bl_timelineItem__time">10:00</span>
+                                <span class="bl_timelineItem__dot"></span>
+                                <div class="bl_timelineItem__body">
+                                    <p class="bl_timelineItem__label">在共享办公空间工作</p>
+                                    <p class="bl_timelineItem__desc">在配备高速Wi-Fi的共享办公室开始上午的工作。</p>
+                                    <img src="../assets/image/hero-img6.webp" alt="共享办公" class="bl_timelineItem__img" loading="lazy" />
+                                </div>
+                            </div>
+                            <div class="bl_timelineItem">
+                                <span class="bl_timelineItem__time">12:00</span>
+                                <span class="bl_timelineItem__dot"></span>
+                                <div class="bl_timelineItem__body">
+                                    <p class="bl_timelineItem__label">在附近的咖啡馆享用午餐</p>
+                                    <p class="bl_timelineItem__desc">通过社区口耳相传，发现只有本地人才知道的午餐好去处。</p>
+                                    <img src="../assets/image/hero-img2.webp" alt="午餐" class="bl_timelineItem__img" loading="lazy" />
+                                </div>
+                            </div>
+                            <div class="bl_timelineItem">
+                                <span class="bl_timelineItem__time">13:00</span>
+                                <span class="bl_timelineItem__dot"></span>
+                                <div class="bl_timelineItem__body">
+                                    <p class="bl_timelineItem__label">在海景咖啡馆工作（Colorit等）</p>
+                                    <p class="bl_timelineItem__desc">移步至面朝大海的咖啡馆，在绝美风景中度过下午的工作时光。</p>
+                                    <img src="../assets/image/colorit%20ocean%20view.jpg" alt="海景咖啡馆" class="bl_timelineItem__img" loading="lazy" />
+                                </div>
+                            </div>
+                            <div class="bl_timelineItem">
+                                <span class="bl_timelineItem__time">17:00</span>
+                                <span class="bl_timelineItem__dot"></span>
+                                <div class="bl_timelineItem__body">
+                                    <p class="bl_timelineItem__label">黄昏垂钓</p>
+                                    <p class="bl_timelineItem__desc">工作结束后前往防波堤或礁石，在夕阳中享受垂钓的至福时光。</p>
+                                    <img src="../assets/image/fishing.jpg" alt="垂钓" class="bl_timelineItem__img" loading="lazy" />
+                                </div>
+                            </div>
+                            <div class="bl_timelineItem">
+                                <span class="bl_timelineItem__time">19:00</span>
+                                <span class="bl_timelineItem__dot"></span>
+                                <div class="bl_timelineItem__body">
+                                    <p class="bl_timelineItem__label">在共居空间烹饪今日钓获·共享晚餐</p>
+                                    <p class="bl_timelineItem__desc">与伙伴们一起烹饪自己钓到的鱼，围坐在岛上特有的餐桌旁。</p>
+                                    <img src="../assets/image/fish.jpg" alt="鱼料理" class="bl_timelineItem__img" loading="lazy" />
+                                </div>
+                            </div>
+                            <div class="bl_timelineItem">
+                                <span class="bl_timelineItem__time">21:00</span>
+                                <span class="bl_timelineItem__dot"></span>
+                                <div class="bl_timelineItem__body">
+                                    <p class="bl_timelineItem__label">在私人房间或会议室工作</p>
+                                    <p class="bl_timelineItem__desc">寂静的夜晚，在私人房间或会议室中迎来高效专注的黄金时段。</p>
+                                </div>
+                            </div>
+                            <div class="bl_timelineItem">
+                                <span class="bl_timelineItem__time">00:00</span>
+                                <span class="bl_timelineItem__dot"></span>
+                                <div class="bl_timelineItem__body">
+                                    <p class="bl_timelineItem__label">就寝</p>
+                                    <p class="bl_timelineItem__desc">伴随着潮声，沉入深深的睡眠。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Day Off -->
+                    <div class="bl_scheduleCol">
+                        <h3 class="bl_scheduleCol__title">休息日 — Day Off</h3>
+                        <div class="bl_timeline">
+                            <div class="bl_timelineItem">
+                                <span class="bl_timelineItem__time">09:00</span>
+                                <span class="bl_timelineItem__dot"></span>
+                                <div class="bl_timelineItem__body">
+                                    <p class="bl_timelineItem__label">起床</p>
+                                    <p class="bl_timelineItem__desc">无需匆忙的早晨。在岛风和阳光中自然醒来。</p>
+                                </div>
+                            </div>
+                            <div class="bl_timelineItem">
+                                <span class="bl_timelineItem__time">10:00</span>
+                                <span class="bl_timelineItem__dot"></span>
+                                <div class="bl_timelineItem__body">
+                                    <p class="bl_timelineItem__label">与社区管理员体验农耕</p>
+                                    <p class="bl_timelineItem__desc">与当地农家一起干农活。触摸泥土，了解食物的源头。</p>
+                                    <img src="../assets/image/hervesting.jpg" alt="农耕体验" class="bl_timelineItem__img" loading="lazy" />
+                                </div>
+                            </div>
+                            <div class="bl_timelineItem">
+                                <span class="bl_timelineItem__time">14:00</span>
+                                <span class="bl_timelineItem__dot"></span>
+                                <div class="bl_timelineItem__body">
+                                    <p class="bl_timelineItem__label">午餐（五岛乌冬面）</p>
+                                    <p class="bl_timelineItem__desc">来一碗Q弹的五岛乌冬面，岛上的定番灵魂美食。</p>
+                                    <img src="../assets/image/Goto%20udon.jpg" alt="五岛乌冬面" class="bl_timelineItem__img" loading="lazy" />
+                                </div>
+                            </div>
+                            <div class="bl_timelineItem">
+                                <span class="bl_timelineItem__time">15:00</span>
+                                <span class="bl_timelineItem__dot"></span>
+                                <div class="bl_timelineItem__body">
+                                    <p class="bl_timelineItem__label">在高滨海滩休憩</p>
+                                    <p class="bl_timelineItem__desc">在以高透明度著称的高滨海水浴场悠闲地享受大海。</p>
+                                    <img src="../assets/image/beach.jpg" alt="高滨海滩" class="bl_timelineItem__img" loading="lazy" />
+                                </div>
+                            </div>
+                            <div class="bl_timelineItem">
+                                <span class="bl_timelineItem__time">16:00</span>
+                                <span class="bl_timelineItem__dot"></span>
+                                <div class="bl_timelineItem__body">
+                                    <p class="bl_timelineItem__label">荒川温泉放松＋附近咖啡馆工作</p>
+                                    <p class="bl_timelineItem__desc">在源泉温泉中消除疲劳，再移步海边咖啡馆继续工作。</p>
+                                    <img src="../assets/image/working%20ocean%20view.jpg" alt="海边咖啡馆工作" class="bl_timelineItem__img" loading="lazy" />
+                                </div>
+                            </div>
+                            <div class="bl_timelineItem">
+                                <span class="bl_timelineItem__time">18:00</span>
+                                <span class="bl_timelineItem__dot"></span>
+                                <div class="bl_timelineItem__body">
+                                    <p class="bl_timelineItem__label">驾车前往大瀬崎灯台观赏日落</p>
+                                    <p class="bl_timelineItem__desc">矗立在断崖上的白色灯塔，与沉入东海的落日。令人屏息的绝景。</p>
+                                    <img src="../assets/image/sunset%20hiking%20Osezaki%20light%20house.jpg" alt="大瀬崎灯台" class="bl_timelineItem__img" loading="lazy" />
+                                </div>
+                            </div>
+                            <div class="bl_timelineItem">
+                                <span class="bl_timelineItem__time">19:00</span>
+                                <span class="bl_timelineItem__dot"></span>
+                                <div class="bl_timelineItem__body">
+                                    <p class="bl_timelineItem__label">在当地人家中烧烤</p>
+                                    <p class="bl_timelineItem__desc">受岛上社区之邀，与当地人围坐在一起共享特别的夜晚。</p>
+                                    <img src="../assets/image/community.jpg" alt="社区烧烤" class="bl_timelineItem__img" loading="lazy" />
+                                </div>
+                            </div>
+                            <div class="bl_timelineItem">
+                                <span class="bl_timelineItem__time">21:00</span>
+                                <span class="bl_timelineItem__dot"></span>
+                                <div class="bl_timelineItem__body">
+                                    <p class="bl_timelineItem__label">在鬼岳观星</p>
+                                    <p class="bl_timelineItem__desc">远离光污染的五岛夜空堪比天象馆。在鬼岳草原仰望满天繁星。</p>
+                                    <img src="../assets/image/stargazer.jpg" alt="观星" class="bl_timelineItem__img" loading="lazy" />
+                                </div>
+                            </div>
+                            <div class="bl_timelineItem">
+                                <span class="bl_timelineItem__time">00:00</span>
+                                <span class="bl_timelineItem__dot"></span>
+                                <div class="bl_timelineItem__body">
+                                    <p class="bl_timelineItem__label">就寝</p>
+                                    <p class="bl_timelineItem__desc">沉浸在充实一天的余韵中，悄然入睡。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
