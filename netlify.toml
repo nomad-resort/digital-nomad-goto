@@ -2,6 +2,13 @@
 [build]
   publish = "."
 
+# Proxy for note.com API (avoids browser CORS restriction)
+[[redirects]]
+  from = "/note-api/*"
+  to = "https://note.com/api/v2/creators/nomadresort/:splat"
+  status = 200
+  force = true
+
 # Redirects for SPA-like behavior (optional)
 [[redirects]]
   from = "/*"
