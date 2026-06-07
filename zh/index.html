@@ -51,7 +51,7 @@
 
     <link rel="stylesheet" href="../assets/css/reset.css" />
     <link rel="stylesheet" href="../assets/css/loading.css" />
-    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/style.css?v=20260607" />
     <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="../assets/css/event-popup.css" />
     <link rel="stylesheet" href="../assets/css/lang-switcher.css" />
@@ -758,7 +758,7 @@
                 <!-- Note Feed: 五岛相关文章 -->
                 <div class="bl_noteSection">
                     <div class="bl_noteSection__header">
-                        <svg class="bl_noteSection__logo" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <svg class="bl_noteSection__logo" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <rect width="28" height="28" rx="6" fill="#41C9B4"/>
                             <path d="M8 20V9.2L13.6 17.6V9.2H15.2V20L9.6 11.6V20H8Z" fill="white"/>
                             <path d="M17.2 9.2H22V10.8H18.8V13.8H21.6V15.4H18.8V18.4H22V20H17.2V9.2Z" fill="white"/>
@@ -776,13 +776,13 @@
                 <!-- YouTube Feed: 五岛相关视频 -->
                 <div class="bl_ytSection">
                     <div class="bl_noteSection__header">
-                        <svg class="bl_noteSection__logo" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <svg class="bl_noteSection__logo" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <rect width="28" height="28" rx="6" fill="#FF0000"/>
                             <path d="M11 9.5L18 14L11 18.5V9.5Z" fill="white"/>
                         </svg>
                         <h2 class="hp_title">YouTube</h2>
                     </div>
-                    <div class="bl_noteGrid" id="js_ytGrid">
+                    <div class="bl_noteGrid bl_ytGrid" id="js_ytGrid">
                         <p class="bl_noteLoading">加载中…</p>
                     </div>
                     <a class="bl_noteSection__more" id="js_ytChannelLink" href="https://www.youtube.com/@nomadresort" target="_blank" rel="noopener noreferrer">
@@ -962,7 +962,7 @@
                 try {
                     for (var page = 1; page <= 3; page++) {
                         var res = await fetch(
-                            'https://note.com/api/v2/creators/nomadresort/contents?kind=note&page=' + page,
+                            '/note-api/contents?kind=note&page=' + page,
                             { headers: { 'Accept': 'application/json' } }
                         );
                         if (!res.ok) break;
