@@ -985,6 +985,110 @@ body {
 }
 
 /* ==========================================================================
+   Note Feed Section
+   ========================================================================== */
+
+.bl_noteSection {
+  margin-top: 48px;
+  text-align: left;
+}
+
+.bl_noteSection__header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+
+.bl_noteSection__logo {
+  width: 28px;
+  height: 28px;
+}
+
+.bl_noteGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.bl_noteCard {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  text-decoration: none;
+  color: inherit;
+  transition: box-shadow 0.25s, transform 0.25s;
+}
+
+.bl_noteCard:hover {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.10);
+  transform: translateY(-3px);
+}
+
+.bl_noteCard__thumb {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: #f0ede8;
+}
+
+.bl_noteCard__body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.bl_noteCard__title {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #222;
+}
+
+.bl_noteCard__date {
+  font-size: 0.75rem;
+  color: #aaa;
+  margin-top: auto;
+}
+
+.bl_noteSection__more {
+  display: block;
+  text-align: center;
+  margin-top: 28px;
+  font-size: 0.85rem;
+  color: var(--color-accent);
+  text-decoration: none;
+  letter-spacing: 0.08em;
+}
+
+.bl_noteSection__more:hover {
+  text-decoration: underline;
+}
+
+.bl_noteLoading {
+  text-align: center;
+  color: #aaa;
+  font-size: 0.85rem;
+  padding: 20px 0;
+}
+
+@media (max-width: 900px) {
+  .bl_noteGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 599px) {
+  .bl_noteGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
    Join Section
    ========================================================================== */
 
