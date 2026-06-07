@@ -804,6 +804,23 @@
                     </a>
                 </div>
 
+                <!-- YouTube Feed: 五島関連動画 -->
+                <div class="bl_ytSection">
+                    <div class="bl_noteSection__header">
+                        <svg class="bl_noteSection__logo" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <rect width="28" height="28" rx="6" fill="#FF0000"/>
+                            <path d="M11 9.5L18 14L11 18.5V9.5Z" fill="white"/>
+                        </svg>
+                        <h2 class="hp_title">YouTube</h2>
+                    </div>
+                    <div class="bl_noteGrid" id="js_ytGrid">
+                        <p class="bl_noteLoading">読み込み中…</p>
+                    </div>
+                    <a class="bl_noteSection__more" id="js_ytChannelLink" href="https://www.youtube.com/@nomadresort" target="_blank" rel="noopener noreferrer">
+                        チャンネルを見る →
+                    </a>
+                </div>
+
                 <div class="bl_localSupport">
                     <h3>ローカルによる<br />滞在サポート</h3>
                     <img loading="lazy" src="../assets/image/support.webp" alt="" />
@@ -982,6 +999,75 @@
             }
 
             loadNoteArticles();
+        })();
+    </script>
+    <script>
+        (function () {
+            var grid = document.getElementById('js_ytGrid');
+            if (!grid) return;
+
+            // ▼▼ 要設定 ▼▼
+            var YT_API_KEY = 'AIzaSyA2CtyVpK0zYzE8zl9WUhiaB7H3nqyCvjg';
+            var YT_CHANNEL_ID = 'UCWtGlfhY0gqq8fqpiaQp0TA';
+            // ▲▲ 要設定 ▲▲
+
+            var GOTO_KEYWORDS = ['五島', '福江', 'ごとう', 'goto', 'Goto', 'GOTO'];
+
+            function isGotoVideo(item) {
+                var title = (item.snippet && item.snippet.title) || '';
+                return GOTO_KEYWORDS.some(function (kw) { return title.includes(kw); });
+            }
+
+            function formatDate(str) {
+                var d = new Date(str);
+                return d.getFullYear() + '.' + ('0' + (d.getMonth() + 1)).slice(-2) + '.' + ('0' + d.getDate()).slice(-2);
+            }
+
+            function renderCards(videos) {
+                if (!videos.length) {
+                    grid.innerHTML = '<p class="bl_noteLoading">五島の動画は見つかりませんでした。</p>';
+                    return;
+                }
+                grid.innerHTML = videos.map(function (v) {
+                    var id = v.id.videoId;
+                    var s = v.snippet;
+                    var thumb = (s.thumbnails && (s.thumbnails.high || s.thumbnails.medium || s.thumbnails.default) || {}).url || '';
+                    return '<a class="bl_noteCard" href="https://www.youtube.com/watch?v=' + id + '" target="_blank" rel="noopener noreferrer">'
+                        + '<div class="bl_ytCard__thumbWrap">'
+                        + '<img src="' + thumb + '" alt="" loading="lazy" />'
+                        + '<span class="bl_ytCard__play" aria-hidden="true"></span>'
+                        + '</div>'
+                        + '<div class="bl_noteCard__body">'
+                        + '<p class="bl_noteCard__title">' + s.title + '</p>'
+                        + '<p class="bl_noteCard__date">' + formatDate(s.publishedAt) + '</p>'
+                        + '</div></a>';
+                }).join('');
+            }
+
+            async function loadYouTubeVideos() {
+                if (YT_API_KEY.indexOf('YOUR_') === 0 || YT_CHANNEL_ID.indexOf('YOUR_') === 0) {
+                    grid.innerHTML = '<p class="bl_noteLoading">YouTube設定が未完了です。</p>';
+                    return;
+                }
+                try {
+                    var link = document.getElementById('js_ytChannelLink');
+                    if (link) link.href = 'https://www.youtube.com/channel/' + YT_CHANNEL_ID;
+
+                    var url = 'https://www.googleapis.com/youtube/v3/search'
+                        + '?key=' + YT_API_KEY
+                        + '&channelId=' + YT_CHANNEL_ID
+                        + '&part=snippet&order=date&maxResults=50&type=video&q=' + encodeURIComponent('五島');
+                    var res = await fetch(url);
+                    if (!res.ok) throw new Error('API error');
+                    var json = await res.json();
+                    var items = (json.items || []).filter(isGotoVideo).slice(0, 6);
+                    renderCards(items);
+                } catch (e) {
+                    grid.innerHTML = '<p class="bl_noteLoading">動画を読み込めませんでした。</p>';
+                }
+            }
+
+            loadYouTubeVideos();
         })();
     </script>
     <script>
