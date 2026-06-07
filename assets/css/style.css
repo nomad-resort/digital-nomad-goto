@@ -1212,6 +1212,42 @@ body {
   text-align: left;
 }
 
+.bl_ytGrid {
+  display: flex;
+  grid-template-columns: none;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 14px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.bl_ytGrid .bl_noteCard {
+  flex: 0 0 calc((100% - 48px) / 3);
+  scroll-snap-align: start;
+}
+
+.bl_ytGrid::-webkit-scrollbar {
+  height: 8px;
+}
+
+.bl_ytGrid::-webkit-scrollbar-thumb {
+  background: #d8d8d8;
+  border-radius: 4px;
+}
+
+@media (max-width: 900px) {
+  .bl_ytGrid .bl_noteCard {
+    flex-basis: 280px;
+  }
+}
+
+@media (max-width: 599px) {
+  .bl_ytGrid .bl_noteCard {
+    flex-basis: 78%;
+  }
+}
+
 .bl_ytCard__thumbWrap {
   position: relative;
   width: 100%;
