@@ -1089,6 +1089,56 @@ body {
 }
 
 /* ==========================================================================
+   YouTube Feed Section
+   ========================================================================== */
+
+.bl_ytSection {
+  margin-top: 64px;
+  text-align: left;
+}
+
+.bl_ytCard__thumbWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #f0ede8;
+  overflow: hidden;
+}
+
+.bl_ytCard__thumbWrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bl_ytCard__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 48px;
+  height: 34px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.bl_noteCard:hover .bl_ytCard__play {
+  background: #ff0000;
+}
+
+.bl_ytCard__play::after {
+  content: '';
+  border-style: solid;
+  border-width: 8px 0 8px 13px;
+  border-color: transparent transparent transparent #fff;
+  margin-left: 3px;
+}
+
+/* ==========================================================================
    Join Section
    ========================================================================== */
 
