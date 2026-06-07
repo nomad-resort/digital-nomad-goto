@@ -785,6 +785,25 @@
                     <!-- Elfsight Instagram Feed | Untitled Instagram Feed -->
                     <div class="elfsight-app-49c31c48-f6ff-4923-a063-5323befee5d1" data-elfsight-app-lazy></div>
                 </div>
+
+                <!-- Note Feed: 五島関連記事 -->
+                <div class="bl_noteSection">
+                    <div class="bl_noteSection__header">
+                        <svg class="bl_noteSection__logo" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <rect width="28" height="28" rx="6" fill="#41C9B4"/>
+                            <path d="M8 20V9.2L13.6 17.6V9.2H15.2V20L9.6 11.6V20H8Z" fill="white"/>
+                            <path d="M17.2 9.2H22V10.8H18.8V13.8H21.6V15.4H18.8V18.4H22V20H17.2V9.2Z" fill="white"/>
+                        </svg>
+                        <h2 class="hp_title">Note</h2>
+                    </div>
+                    <div class="bl_noteGrid" id="js_noteGrid">
+                        <p class="bl_noteLoading">読み込み中…</p>
+                    </div>
+                    <a class="bl_noteSection__more" href="https://note.com/nomadresort" target="_blank" rel="noopener noreferrer">
+                        すべての記事を見る →
+                    </a>
+                </div>
+
                 <div class="bl_localSupport">
                     <h3>ローカルによる<br />滞在サポート</h3>
                     <img loading="lazy" src="../assets/image/support.webp" alt="" />
@@ -902,6 +921,69 @@
             <a class="bl_langSwitcherItem" href="../zh/" onclick="localStorage.setItem('lang','zh')">中文</a>
         </div>
     </div>
+    <script>
+        (function () {
+            var grid = document.getElementById('js_noteGrid');
+            if (!grid) return;
+
+            var GOTO_KEYWORDS = ['五島', '福江', 'ごとう', 'goto', 'Goto', 'GOTO'];
+
+            function isGotoArticle(item) {
+                var tags = (item.hashtags || []).map(function (h) { return h.name || ''; });
+                var title = item.name || '';
+                return GOTO_KEYWORDS.some(function (kw) {
+                    return tags.some(function (t) { return t.includes(kw); }) || title.includes(kw);
+                });
+            }
+
+            function formatDate(str) {
+                var d = new Date(str);
+                return d.getFullYear() + '.' + ('0' + (d.getMonth() + 1)).slice(-2) + '.' + ('0' + d.getDate()).slice(-2);
+            }
+
+            function renderCards(articles) {
+                if (!articles.length) {
+                    grid.innerHTML = '<p class="bl_noteLoading">五島の記事は見つかりませんでした。</p>';
+                    return;
+                }
+                grid.innerHTML = articles.map(function (a) {
+                    var thumb = a.eyecatch || a.thumbnailExternalUrl || '';
+                    var imgTag = thumb
+                        ? '<img class="bl_noteCard__thumb" src="' + thumb + '" alt="" loading="lazy" />'
+                        : '<div class="bl_noteCard__thumb"></div>';
+                    return '<a class="bl_noteCard" href="' + a.noteUrl + '" target="_blank" rel="noopener noreferrer">'
+                        + imgTag
+                        + '<div class="bl_noteCard__body">'
+                        + '<p class="bl_noteCard__title">' + a.name + '</p>'
+                        + '<p class="bl_noteCard__date">' + formatDate(a.publishAt) + '</p>'
+                        + '</div></a>';
+                }).join('');
+            }
+
+            async function loadNoteArticles() {
+                var collected = [];
+                try {
+                    for (var page = 1; page <= 3; page++) {
+                        var res = await fetch(
+                            'https://note.com/api/v2/creators/nomadresort/contents?kind=note&page=' + page,
+                            { headers: { 'Accept': 'application/json' } }
+                        );
+                        if (!res.ok) break;
+                        var json = await res.json();
+                        var items = (json.data && json.data.contents) || [];
+                        if (!items.length) break;
+                        collected = collected.concat(items.filter(isGotoArticle));
+                        if (collected.length >= 6) break;
+                    }
+                    renderCards(collected.slice(0, 6));
+                } catch (e) {
+                    grid.innerHTML = '<p class="bl_noteLoading">記事を読み込めませんでした。<a href="https://note.com/nomadresort" target="_blank" rel="noopener noreferrer">noteで見る</a></p>';
+                }
+            }
+
+            loadNoteArticles();
+        })();
+    </script>
     <script>
         (function () {
             var toggle = document.querySelector('.bl_langSwitcherToggle');
