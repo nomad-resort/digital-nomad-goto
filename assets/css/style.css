@@ -1094,8 +1094,8 @@ body {
 
 .bl_toc {
   position: fixed;
-  right: 20px;
-  bottom: 20px;
+  left: 20px;
+  top: 20px;
   z-index: 9000;
 }
 
@@ -1131,8 +1131,8 @@ body {
 
 .bl_tocPanel {
   position: absolute;
-  right: 0;
-  bottom: calc(100% + 12px);
+  left: 0;
+  top: calc(100% + 12px);
   width: 250px;
   max-height: 65vh;
   overflow-y: auto;
