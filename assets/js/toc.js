@@ -32,9 +32,11 @@
     toc.classList.toggle('is_open');
   });
   document.addEventListener('click', function () { toc.classList.remove('is_open'); });
-  document.addEventListener('touchstart', function () { toc.classList.remove('is_open'); }, { passive: true });
+  document.addEventListener('touchstart', function (e) {
+    if (toc.contains(e.target)) return;
+    toc.classList.remove('is_open');
+  }, { passive: true });
   panel.addEventListener('click', function (e) { e.stopPropagation(); });
-  panel.addEventListener('touchstart', function (e) { e.stopPropagation(); }, { passive: true });
 
   var links = Array.prototype.slice.call(panel.querySelectorAll('a'));
   var byId = {};

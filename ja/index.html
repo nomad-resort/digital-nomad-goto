@@ -1095,7 +1095,8 @@
             document.addEventListener('click', function () {
                 dropdown.classList.remove('is_open');
             });
-            document.addEventListener('touchstart', function () {
+            document.addEventListener('touchstart', function (e) {
+                if (toggle.contains(e.target) || dropdown.contains(e.target)) return;
                 dropdown.classList.remove('is_open');
             }, { passive: true });
 
@@ -1125,7 +1126,7 @@
             }
         };
     </script>
-    <script src="../assets/js/toc.js?v=20260721" defer></script>
+    <script src="../assets/js/toc.js?v=20260721b" defer></script>
 </body>
 
 </html>
