@@ -1061,9 +1061,6 @@
       var toggle = document.querySelector('.bl_langSwitcherToggle');
       var dropdown = document.querySelector('.bl_langSwitcherDropdown');
 
-      // 初期状態でメニューを開く
-      dropdown.classList.add('is_open');
-
       toggle.addEventListener('click', function (e) {
         e.stopPropagation();
         dropdown.classList.toggle('is_open');
@@ -1071,6 +1068,9 @@
       document.addEventListener('click', function () {
         dropdown.classList.remove('is_open');
       });
+      document.addEventListener('touchstart', function () {
+        dropdown.classList.remove('is_open');
+      }, { passive: true });
 
       // スクロール時にメニューを閉じる
       window.addEventListener('scroll', function () {
