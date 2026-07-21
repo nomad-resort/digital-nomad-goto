@@ -1189,8 +1189,8 @@ body {
 
 @media (max-width: 599px) {
   .bl_toc {
-    right: 14px;
-    bottom: 14px;
+    left: 14px;
+    top: 14px;
   }
   .bl_tocToggle {
     padding: 14px;
